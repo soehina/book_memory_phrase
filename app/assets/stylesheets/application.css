@@ -13,3 +13,56 @@
  *= require_tree .
  *= require_self
  */
+
+
+ /* ========================================
+    まとめて指定
+========================================= */
+body{
+    font-weight: 100;
+    font-family:serif !important;
+    font-size: medium;
+}
+
+h2{
+    padding: 30px 15px;
+}
+
+header a{
+    color:#4e351e;
+}
+
+#wrap{
+    widows: 100%;
+    height: auto;
+    background-color: #f0ebd8;
+    color: #4e351e;
+    text-align: -webkit-center;
+    padding: 10px;
+}
+
+.box{
+    background-color: rgb(253, 255, 246);
+    writing-mode: vertical-rl;
+    padding: 15px;
+    text-align: start;
+    width: auto;
+    height: 75%;
+    margin: 30px;
+}
+
+.login{
+    width: -webkit-fill-available;
+    margin: 20px;
+}
+
+/* ========================================
+    メディアクエリ モバイル
+========================================= */
+
+@media only screen and (max-width: 767px){
+
+    #wrap {
+    padding-right: 50px;
+    }
+}
