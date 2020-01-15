@@ -32,6 +32,10 @@ header a{
     color:#4e351e;
 }
 
+p{
+    text-indent: 1em;
+}
+
 #wrap{
     widows: 100%;
     height: auto;

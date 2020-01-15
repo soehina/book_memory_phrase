@@ -24,15 +24,14 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "ログイン",class:'btn btn-info'  %>
   </div>
 
-  # 隠しフィールドで設定
   <%= f.hidden_field :name,value:"testuser" %>
   <%= f.hidden_field :email,value:"test@example.com" %>
   <%= f.hidden_field :password,value:"testtest" %>
   <div class="actions">
-    <%= f.submit "かんたんログイン" %>
+    <%= f.submit "かんたんログイン",class:'btn btn-info'  %>
   </div>
 <% end %>
 

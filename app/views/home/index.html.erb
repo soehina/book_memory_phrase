@@ -1,2 +1,14 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="row">
+    <div class="box col-sm-12 center-block mx-auto">
+        <h2>いつも出逢いは、一言から。</h2>
+        <p>「memorybookonephrase」は、思い出の本から印象に残ったワンフレーズを共有することで、本との新たな出逢いを作る場です。</p>
+        <p>ぜひ、あなたの大切なフレーズを共有してください。</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="login">
+        <%= link_to 'ログイン', new_user_session_path,class:'btn btn-info col-sm-2 ' %>
+        <%= link_to '新規登録',new_user_registration_path,class:'btn btn-warning col-sm-2 ' %>
+    </div>
+</div>
