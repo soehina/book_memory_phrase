@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AppName</title>
+    <title>bookmemoryphrase</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
     <%= yield %>
   </body>
 </html>
