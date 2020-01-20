@@ -29,7 +29,8 @@ h2{
     padding: 30px 15px;
 }
 
-header a{
+header a,
+nav a{
     color:#fff;
 }
 

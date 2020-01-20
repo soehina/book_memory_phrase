@@ -15,15 +15,15 @@
   <body>
     <div id="wrap">
       <header>
-      <% if current_user %>
-        <p>現在のユーザー：<%= current_user.name %></p>
-      <% end %>
         <nav class="navbar navbar-dark navbar-right" style="background-color: black;>
-        <%if current_user  %>
-          <%=link_to "book memory phrase",home_show_path%>
-        <% else %>
-          <%=link_to "book memory phrase","/"%>
-        <% end %>
+          <% if current_user %>
+            <p>現在のユーザー：<%= current_user.name %></p>
+          <% end %>
+          <%if current_user  %>
+            <%=link_to "book memory phrase",home_show_path%>
+          <% else %>
+            <%=link_to "book memory phrase","/"%>
+          <% end %>
           <button class="navbar-toggler" type="button"
               data-toggle="collapse"
               data-target="#navmenu1"
