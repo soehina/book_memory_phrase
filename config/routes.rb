@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get '/'=>'home#index'
   get 'home/show'
 
+  get 'home/new' => 'home#new'
+  post 'home/create' => 'home#create'
+
   devise_scope :user do
     root "users/sessions#new"
     get '/users/sign_out' => 'devise/sessions#destroy'

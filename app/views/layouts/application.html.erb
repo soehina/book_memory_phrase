@@ -13,34 +13,34 @@
   </head>
 
   <body>
-    <div id="wrap">
-      <header>
-        <nav class="navbar navbar-dark navbar-right" style="background-color: black;>
-          <% if current_user %>
-            <p>現在のユーザー：<%= current_user.name %></p>
-          <% end %>
-          <%if current_user  %>
-            <%=link_to "book memory phrase",home_show_path%>
-          <% else %>
-            <%=link_to "book memory phrase","/"%>
-          <% end %>
-          <button class="navbar-toggler" type="button"
-              data-toggle="collapse"
-              data-target="#navmenu1"
-              aria-controls="navmenu1"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navmenu1">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" href="#">Menu#1</a>
-              <a class="nav-item nav-link" href="#">Menu#2</a>
-              <a class="nav-item nav-link" href="#">Menu#3</a>
-            </div>
+    <header>
+      <nav class="navbar navbar-dark navbar-right bg-dark" >
+        <% if current_user  %>
+          <%=link_to "book memory phrase",home_show_path%>
+        <% else %>
+          <%=link_to "book memory phrase","/"%>
+        <% end %>
+        <button class="navbar-toggler" type="button"
+            data-toggle="collapse"
+            data-target="#navmenu1"
+            aria-controls="navmenu1"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu1">
+          <div class="navbar-nav">
+            <% if current_user %>
+              <a href="#">現在のユーザー：<%= current_user.name %></a>
+              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+            <% end %>
+            <a class="nav-item nav-link" href="#">Menu#2</a>
+            <a class="nav-item nav-link" href="#">Menu#3</a>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
+    <div id="wrap">
       <div class="container-fluid">
         <%= yield %>
       </div>
