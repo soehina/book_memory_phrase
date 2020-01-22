@@ -17,7 +17,8 @@ class HomeController < ApplicationController
     @post = Post.new(
       title: params[:title],
       phrase: params[:phrase],
-      content: params[:content]
+      content: params[:content],
+      book_image: params[:book_image]
     )
     @post.user_id = current_user.id
     if @post.save

@@ -1,7 +1,15 @@
-<%= form_tag(home_create_path) do %>
-    <input type="text" name="title">
-    <textarea name="phrase">
-    <textarea name="title">
-    <textarea name="content">
-    <input type="submit" value="投稿">
-<% end %>
+<div class="row justify-content-center">
+    <%= form_tag(home_create_path) do %>
+        <div class="text">タイトル</div>
+        <input type="text" name="title">
+        <div class="text">フレーズ</div>
+        <input name="phrase">
+        <div class="text">おすすめポイント</div>
+        <textarea name="content"></textarea>
+        <div class="text">画像URL</div>
+        <input type="url" name="book_image">
+        <div class="center-block">
+            <input type="submit" class="input-group-text bg-info text-white " value="投稿">
+        </div>
+    <% end %>
+</div>
