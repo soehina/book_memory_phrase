@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get '/'=>'home#index'
-  get 'home/show'
+  get 'home/show' => 'home#show'
 
   get 'home/new' => 'home#new'
   post 'home/create' => 'home#create'

@@ -30,7 +30,8 @@ h2{
 }
 
 header a,
-header p{
+header p,
+li{
     color:#fff;
 }
 
@@ -55,6 +56,14 @@ p{
     width: auto;
     height: 75%;
     margin: 30px;
+}
+
+.book_image{
+    background-image: url("/images/book.jpg");
+}
+
+.btn-block{
+    margin: 10px;
 }
 
 .login{
