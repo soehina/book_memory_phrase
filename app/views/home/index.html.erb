@@ -1,5 +1,5 @@
 <div class="box col-sm-12 col-md-4 center-block mx-auto">
-    <h2>いつも出逢いは、一言から。</h2>
+    <h4>いつも出逢いは、一言から。</h4>
         <p>「memorybookonephrase」は、思い出の本から印象に残ったワンフレーズを共有することで、本との新たな出逢いを作る場です。</p>
         <p>ぜひ、あなたの大切なフレーズを共有してください。</p>
 </div>
@@ -11,14 +11,14 @@
 
 <% @posts.each do |post| %>
     <div class="box book-img col-sm-12 col-md-4 center-block mx-auto">
-        <div>
-            <%= post.user.name %>
-        </div>
-        <h2>
+        <h4>
             <%= post.phrase %>
-        </h2>
+        </h4>
         <p class="title">
             <%= post.title %>
+        </p>
+        <p class="name">
+            投稿者<span class="name_brank"></span><%= post.user.name %>
         </p>
         <p class="content">
             <%= post.content%>

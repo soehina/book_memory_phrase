@@ -1,13 +1,13 @@
 <% @posts.each do |post| %>
     <div class="box book-img col-sm-12 col-md-4 center-block mx-auto">
-        <div>
-            <%= post.user.name %>
-        </div>
-        <h2>
+        <h4>
             <%= post.phrase %>
-        </h2>
+        </h4>
         <p class="title">
             <%= post.title %>
+        </p>
+        <p class="name">
+            <span>投稿者&ensp;&ensp;</span><%= post.user.name %>
         </p>
         <p class="content">
             <%= post.content%>
