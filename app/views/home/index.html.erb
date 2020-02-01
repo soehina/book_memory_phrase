@@ -10,7 +10,7 @@
 </div>
 
 <% @posts.each do |post| %>
-    <div class="box book-img col-sm-12 col-md-4 center-block mx-auto">
+    <div class="box book-img col-md-6 col-sm-12 col-lg-4 center-block mx-auto">
         <h4>
             <%= post.phrase %>
         </h4>
@@ -18,7 +18,7 @@
             <%= post.title %>
         </p>
         <p class="name">
-            投稿者<span class="name_brank"></span><%= post.user.name %>
+            投稿者&ensp;&ensp;<%= post.user.name %>
         </p>
         <p class="content">
             <%= post.content%>
