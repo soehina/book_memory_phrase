@@ -1,0 +1,26 @@
+<% @posts.each do |post| %>
+    <div class="book-img col-md-4 col-sm-12 center-block mx-auto">
+        <div class="box">   
+            <div class="image-box">
+                <h4>
+                    <%= post.phrase %>
+                </h4>
+                <div class="edit-delete">
+                    <p><a>編集する</a>　<a>削除する</a></p>
+                </div>
+                <img src='<%= post.book_image %>' class="img-thumbnail img-fluid d-block">
+            </div>
+            <div>
+                <p class="title">
+                    『<%= post.title %>』
+                </p>
+                <p class="name">
+                    <span>投稿者&ensp;&ensp;</span><%= post.user.name %>
+                </p>
+                <p class="content">
+                    <%= post.content%>
+                </p>
+            </div>
+        </div>
+    </div>
+<% end %>

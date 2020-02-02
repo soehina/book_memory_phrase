@@ -1,27 +1,13 @@
-<div class="box col-sm-12 col-md-4 center-block mx-auto">
-    <h4>いつも出逢いは、一言から。</h4>
-        <p>「memorybookonephrase」は、思い出の本から印象に残ったワンフレーズを共有することで、本との新たな出逢いを作る場です。</p>
-        <p>ぜひ、あなたの大切なフレーズを共有してください。</p>
-</div>
-
-<div class="login">
-    <%= link_to 'ログイン', new_user_session_path,class:'btn btn-info col-sm-2 ' %>
-    <%= link_to '新規登録',new_user_registration_path,class:'btn btn-warning col-sm-2 ' %>
-</div>
-
-<% @posts.each do |post| %>
-    <div class="box book-img col-md-6 col-sm-12 col-lg-4 center-block mx-auto">
-        <h4>
-            <%= post.phrase %>
-        </h4>
-        <p class="title">
-            <%= post.title %>
-        </p>
-        <p class="name">
-            投稿者&ensp;&ensp;<%= post.user.name %>
-        </p>
-        <p class="content">
-            <%= post.content%>
-        </p>
+<div class="jumbotron">
+    <div class="container">
+        <h3>いつも出逢いは、一言から。</h3>
+            <p>「memorybookonephrase」は、思い出の本から印象に残ったワンフレーズを共有することで、本との新たな出逢いを作る場です。</p>
+            <p>ぜひ、あなたの大切なフレーズを共有してください。</p>
+        <div class="login">
+            <%= link_to 'ログイン', new_user_session_path,class:'btn btn-info col-sm-2 ' %>
+            <%= link_to '新規登録',new_user_registration_path,class:'btn btn-warning col-sm-2 ' %>
+        </div>
     </div>
-<% end %>
+</div>
+
+<%= render 'shared/show' %>

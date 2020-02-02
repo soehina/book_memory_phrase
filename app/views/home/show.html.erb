@@ -1,16 +1,1 @@
-<% @posts.each do |post| %>
-    <div class="box book-img col-md-6 col-sm-12 col-lg-4 center-block mx-auto">
-        <h4>
-            <%= post.phrase %>
-        </h4>
-        <p class="title">
-            『　<%= post.title %>　』
-        </p>
-        <p class="name">
-            <span>投稿者&ensp;&ensp;</span><%= post.user.name %>
-        </p>
-        <p class="content">
-            <p><%= post.content%></p>
-        </p>
-    </div>
-<% end %>
+<%= render 'shared/show' %>

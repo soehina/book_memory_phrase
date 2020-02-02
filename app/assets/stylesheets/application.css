@@ -29,6 +29,10 @@ h2{
     padding: 30px 15px;
 }
 
+h4{
+    margin: 0;
+}
+
 header a,
 header p,
 li{
@@ -52,17 +56,24 @@ p{
 }
 
 .box{
-    background-color: rgb(253, 255, 246);
     writing-mode: vertical-rl;
     padding: 15px;
     text-align: start;
-    height: 60;
+    height: auto;
     margin: 15px;
     border: solid 1px #d9d9d9;
+    background-size: cover;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    width: 370px;
 }
 
-.book_image{
-    background-image: url("/images/book.jpg");
+.image-box{
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .btn-block{
@@ -101,6 +112,16 @@ textarea{
     line-height: 2.0;
 }
 
-h4{
-    text-align: center;
+.jumbotron {
+    background:url("/images/top-book.jpg") center no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.edit-delete{
+    text-align: end;
+}
+
+img{
+    width: 205px;
 }
