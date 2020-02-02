@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   get 'home/new' => 'home#new'
   post 'home/create' => 'home#create'
 
+  get 'home/:id/edit' => 'home#edit'
+  post 'home/:id/update' => 'home#update'
+
+  post 'home/:id/destroy' => 'home#destroy'
+
   devise_scope :user do
     root "users/sessions#new"
     get '/users/sign_out' => 'devise/sessions#destroy'

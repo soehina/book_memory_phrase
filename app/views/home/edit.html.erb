@@ -1,0 +1,17 @@
+<div class="center-block mx-auto">
+    <%= form_tag("/home/#{@post.id}/update",{method: :post}) do %>
+        <div>タイトル</div>
+        <input type="text" name="title" value="<%= @post.title %>" class="form-control">
+        <div>著者</div>
+        <input type="text" name="author" value="<%= @post.author%>" class="form-control">
+        <div>フレーズ</div>
+        <input type="text" name="phrase" value="<%= @post.phrase %>" class="form-control">
+        <div>おすすめポイント</div>
+        <textarea name="content" class="form-control" rows="3"><%= @post.content %></textarea>
+        <div>画像URL</div>
+        <input type="url" name="book_image" class="form-control">
+        <div class="center-block">
+            <input type="submit" class="input-group-text bg-info text-white " value="投稿">
+        </div>
+    <% end %>
+</div>

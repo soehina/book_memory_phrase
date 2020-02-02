@@ -17,6 +17,7 @@ class HomeController < ApplicationController
   def create
     @post = Post.new(
       title: params[:title],
+      author: params[:author],
       phrase: params[:phrase],
       content: params[:content],
       book_image: params[:book_image],
@@ -31,30 +32,39 @@ class HomeController < ApplicationController
   end
 
   def edit
-    @post = Post.find_by(id: params[:id])
   end
 
   def update
-    @post = Post.find_by(id: params[:id])
     @post.title = params[:title]
+    @post.author = params[:author]
+    @post.author = params[:phrase]
+    @post.phrase = params[:phrase]
     @post.content = params[:content]
-    @post.save
-    redirect_to(home_show_path)
+    if @post.save
+      redirect_to(home_show_path)
+    else
+      render(home_edit_path)
+    end
   end
 
   def destroy
-    @post = Post.find_by(id: params[:id])
     @post.destroy
     redirect_to(home_show_path)
   end
 
   private
   def set_post
-    @post = Post.find(params[:id])
+    @post = Post.find_by(id: params[:id])
   end
 
   def post_params
-    params.require(:post).permit(:title, :content, :user_id)
+    params.require(:post).permit(
+      :title,
+      :author,
+      :phrase,
+      :content,
+      :user_id
+    )
   end
 
   def ensure_correct_user
