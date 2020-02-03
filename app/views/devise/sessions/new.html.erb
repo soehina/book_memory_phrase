@@ -27,7 +27,9 @@
     <div class="actions btn-block">
       <%= f.submit "ログイン",class:'btn btn-info'  %>
     </div>
+<% end %>
 
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <%= f.hidden_field :name,value:"testuser" %>
     <%= f.hidden_field :email,value:"test@example.com" %>
     <%= f.hidden_field :password,value:"testtest" %>
