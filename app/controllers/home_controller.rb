@@ -37,9 +37,9 @@ class HomeController < ApplicationController
   def update
     @post.title = params[:title]
     @post.author = params[:author]
-    @post.author = params[:phrase]
     @post.phrase = params[:phrase]
     @post.content = params[:content]
+    @post.book_image = params[:book_image]
     if @post.save
       redirect_to(home_show_path)
     else
