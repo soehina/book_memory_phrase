@@ -57,7 +57,7 @@ p{
 
 .box{
     writing-mode: vertical-rl;
-    padding: 15px;
+    padding: 25px;
     text-align: start;
     height: auto;
     margin: 15px;
@@ -107,7 +107,7 @@ textarea{
 }
 
 .name,
-span,
+.author,
 .edit-delete{
     text-align: end;
 }

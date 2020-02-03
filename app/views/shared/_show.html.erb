@@ -3,26 +3,28 @@
         <div class="box">
             <div class="image-box">
                 <h5><%= post.phrase %></h5>
-                <span>著者　<%= post.author %></span>
-                <% if current_user.id == post.user_id %>
-                    <div class="edit-delete">
-                        <%=link_to("編集" , "/home/#{post.id}/edit") %>
-                        <%=link_to("削除" , "/home/#{post.id}/destroy",{method:"post"}) %>
-                    </div>
-                <% end %>
+                <p class="name">
+                    <span>投稿者&ensp;&ensp;</span><%= link_to("#{post.post_user}", "/users/#{post.user_id}/show")%>
+                </p>
                 <img src='<%= post.book_image %>' class="img-fluid d-block">
             </div>
             <div>
                 <p class="title">
                     『<%= post.title %>』
                 </p>
-                <p class="name">
-                    <span>投稿者&ensp;&ensp;</span><%= post.user.name %>
+                <p class="author">
+                    著者　<%= post.author %>
                 </p>
                 <p>★ おすすめポイント</p>
                 <p class="content">
                     <%= post.content%>
                 </p>
+                <% if user_signed_in? && current_user.id == post.user_id %>
+                    <div class="edit-delete">
+                        <%=link_to("編集" , "/home/#{post.id}/edit") %>
+                        <%=link_to("削除" , "/home/#{post.id}/destroy",{method:"post"}) %>
+                    </div>
+                <% end %>
             </div>
         </div>
     </div>

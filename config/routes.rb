@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/:id/show' => 'users#show'
+
   get '/'=>'home#index'
   get 'home/show' => 'home#show'
 
@@ -19,6 +21,5 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
-  # root to: "home#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
