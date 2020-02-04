@@ -99,11 +99,11 @@ textarea{
 }
 
 .title{
-    font-size: larger;
+    font-size: large;
 }
 
 .name{
-    margin-left: 30px;
+    margin-right: -10px;
 }
 
 .name,
@@ -132,7 +132,7 @@ img{
 }
 
 @media screen and (max-width:1024px) {
-    /*　画面サイズが1024pxからはここを読み込む　*/
+    /*　画面サイズが1024px以下からはここを読み込む　*/
     .box{
         height: 90%;
     }
