@@ -130,3 +130,10 @@ textarea{
 img{
     width: 200px;
 }
+
+@media screen and (max-width:1024px) {
+    /*　画面サイズが1024pxからはここを読み込む　*/
+    .box{
+        height: 90%;
+    }
+}
