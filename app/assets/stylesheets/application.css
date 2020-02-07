@@ -47,10 +47,13 @@ p{
     text-indent: 1em;
 }
 
+#overwrap{
+    background-color: #f2f2e8;
+}
+
 #wrap{
     widows: 100%;
     height: auto;
-    background-color: #f2f2e8;
     text-align: -webkit-center;
     padding: 10px;
 }

@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'users/:id/show' => 'users#show'
-
   get '/'=>'home#index'
   get 'home/show' => 'home#show'
+  get 'home/:id/user_show' => 'home#user_show'
 
   get 'home/new' => 'home#new'
   post 'home/create' => 'home#create'
@@ -17,6 +16,7 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
+  resources :home
   devise_for :users, :controllers => {
     sessions: 'users/sessions'
   }

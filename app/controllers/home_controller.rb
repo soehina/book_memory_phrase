@@ -10,6 +10,10 @@ class HomeController < ApplicationController
     @posts = Post.all
   end
 
+  def user_show
+    @posts = user.posts
+  end
+
   def new
     @post=Post.new
   end

@@ -1,0 +1,31 @@
+<% @posts.user.each do |post| %>
+<div class="book-img col-md-4 col-sm-12 center-block mx-auto">
+        <div class="box">
+            <div class="image-box">
+                <h5><%= post.user.phrase %></h5>
+                <p class="name">
+                    <span>投稿者&ensp;&ensp;</span><%= link_to("#{post.user.post_user}", "/home/#{post.user.user_id}/user_show")%>
+                </p>
+                <img src='<%= post.user.book_image %>' class="img-fluid d-block">
+            </div>
+            <div>
+                <p class="title">
+                    『<%= post.user.title %>』
+                </p>
+                <p class="author">
+                    著者　<%= post.user.author %>
+                </p>
+                <p>★ おすすめポイント</p>
+                <p class="content">
+                    <%= post.user.content%>
+                </p>
+                <% if user_signed_in? && current_user.id == post.user_id %>
+                    <div class="edit-delete">
+                        <%=link_to("編集" , "/home/#{post.user.id}/edit",class:"text-muted") %>
+                        <%=link_to("削除" , "/home/#{post.user.id}/destroy",method: :post,class:"text-muted") %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+<% end %>
