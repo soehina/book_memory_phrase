@@ -73,6 +73,7 @@ p{
 }
 
 .image-box{
+    height: 50%;
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
