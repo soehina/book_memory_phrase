@@ -15,10 +15,6 @@ class ApplicationController < ActionController::Base
         end
     end
 
-    def user
-        return User.find_by(id: self.user_id)
-    end 
-
     protected
     def configure_permitted_parameters
         added_attrs = [ :name, :email, :password, :password_confirmation　]

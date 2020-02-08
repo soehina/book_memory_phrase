@@ -3,9 +3,5 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :post,dependent: :destroy
-
-  def posts
-    return Post.where(user_id: self.id)
-  end
+  has_many :posts, dependent: :destroy
 end

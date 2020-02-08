@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :set_post, only: [:edit, :update, :destroy]
+  before_action :set_post, only: [:user_show, :edit, :update, :destroy]
   before_action :authenticate_user, only: [:create, :new, :edit, :destroy]
 
   def index
@@ -11,7 +11,7 @@ class HomeController < ApplicationController
   end
 
   def user_show
-    @posts = user.posts
+    @posts = Post.where(user_id: @post.user.id)
   end
 
   def new
@@ -69,12 +69,5 @@ class HomeController < ApplicationController
       :content,
       :user_id
     )
-  end
-
-  def ensure_correct_user
-    if current_user.id!= @post.user_id
-      flash[:notice] = "Not yours"
-      redirect_to(home_show_path)
-    end
   end
 end

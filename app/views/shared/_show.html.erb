@@ -2,12 +2,12 @@
     <div class="container-fluid">
         <div class="row">
             <% @posts.each do |post| %>
-            <div class="book-img col-lg-4 col-md-6 col-sm-12 center-block mx-auto">
-                <div class="box">
-                    <div class="image-box">
-                        <h5><%= post.phrase %></h5>
+                <div class="book-img col-lg-4 col-md-6 col-sm-12 center-block mx-auto">
+                    <div class="box">
+                        <div class="image-box">
+                            <h5><%= post.phrase %></h5>
                             <p class="name">
-                                <span>投稿者&ensp;&ensp;</span><%= link_to("#{post.post_user}", "/home/#{post.user_id}/user_show")%>
+                                <span>投稿者&ensp;&ensp;</span><%= link_to("#{post.post_user}", "/home/#{post.user.id}/user_show")%>
                             </p>
                             <img src='<%= post.book_image %>' class="img-fluid d-block">
                         </div>
