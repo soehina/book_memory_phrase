@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <% @posts.each do |post| %>
-            <div class="book-img col-md-4 col-sm-12 center-block mx-auto">
+            <div class="book-img col-lg-4 col-md-6 col-sm-12 center-block mx-auto">
                 <div class="box">
                     <div class="image-box">
                         <h5><%= post.phrase %></h5>
@@ -21,13 +21,13 @@
                             <p>★ おすすめポイント</p>
                             <p class="content">
                                 <%= post.content%>
+                                <% if user_signed_in? && current_user.id == post.user_id %>
+                                    <span class="edit-delete">
+                                        <%=link_to("編集" , "/home/#{post.id}/edit",class:"text-muted") %>
+                                        <%=link_to("削除" , "/home/#{post.id}/destroy",method: :post,class:"text-muted") %>
+                                    </span>
+                                <% end %>
                             </p>
-                            <% if user_signed_in? && current_user.id == post.user_id %>
-                                <div class="edit-delete">
-                                    <%=link_to("編集" , "/home/#{post.id}/edit",class:"text-muted") %>
-                                    <%=link_to("削除" , "/home/#{post.id}/destroy",method: :post,class:"text-muted") %>
-                                </div>
-                            <% end %>
                         </div>
                     </div>
                 </div>
