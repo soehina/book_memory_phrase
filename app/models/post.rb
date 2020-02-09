@@ -1,8 +1,8 @@
 class Post < ApplicationRecord
-    validates :title,:presence => true
-    validates :content,:presence => true
-    validates :phrase,:presence => true
-    validates :author,:presence => true
+    validates :title,:presence => true, length:{maximum: 15}
+    validates :content,:presence => true, length:{maximum: 90}
+    validates :phrase,:presence => true, length:{maximum: 50}
+    validates :author,:presence => true, length:{maximum: 15}
     validates :user_id,:presence => true
 
     belongs_to :user

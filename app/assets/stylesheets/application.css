@@ -15,7 +15,7 @@
  */
 
 
- /* ========================================
+/* ========================================
     まとめて指定
 ========================================= */
 
@@ -40,7 +40,8 @@ li{
 }
 
 #wrap,
-.user_show_name{
+.user_show_name,
+.form-box{
     color: #4e351e;
 }
 
@@ -62,6 +63,10 @@ p{
     text-align: -webkit-center;
     padding: 10px;
 }
+
+/* ========================================
+    投稿
+========================================= */
 
 .box{
     writing-mode: vertical-rl;
@@ -85,22 +90,8 @@ p{
     justify-content: space-between;
 }
 
-.btn-block{
-    margin: 10px;
-}
-
-.login{
-    width: -webkit-fill-available;
-    margin: 20px;
-}
-
 .text{
     margin: 20px 0 10px 0;
-}
-
-textarea{
-    widows: 60%;
-    height: 20%;
 }
 
 .center-block input{
@@ -140,6 +131,25 @@ img{
     width: 200px;
 }
 
+.form-box{
+    text-align: center;
+    margin: 20px 0;
+    width: 500px;
+}
+
+/* ========================================
+    ログイン・新規登録
+========================================= */
+
+.btn-block{
+    margin: 10px;
+}
+
+.login{
+    width: -webkit-fill-available;
+    margin: 20px;
+}
+
 .user_show_name{
     margin: 30px 0 10px 0;
     text-align: center;
@@ -148,7 +158,7 @@ img{
 
 @media screen and (max-width:1024px) {
     /*　画面サイズが1024px以下からはここを読み込む　*/
-    .box{
-        height: 90%;
-    }
+    /* .box{
+        height: 100%;
+    } */
 }
