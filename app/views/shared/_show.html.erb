@@ -7,7 +7,7 @@
                         <div class="image-box">
                             <h5><%= post.phrase %></h5>
                             <p class="name">
-                                <span>投稿者&ensp;&ensp;</span><%= link_to("#{post.post_user}", "/home/#{post.user.id}/user_show")%>
+                                <span>投稿者&ensp;&ensp;</span><%= link_to("#{post.post_user}", "/home/#{post.id}/user_show")%>
                             </p>
                             <img src='<%= post.book_image %>' class="img-fluid d-block">
                         </div>

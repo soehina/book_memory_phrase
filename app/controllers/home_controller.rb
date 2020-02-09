@@ -11,7 +11,8 @@ class HomeController < ApplicationController
   end
 
   def user_show
-    @posts = Post.where(user_id: @post.user.id)
+    @user = @post.user
+    @posts = @user.posts
   end
 
   def new
