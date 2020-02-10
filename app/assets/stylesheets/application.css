@@ -41,12 +41,13 @@ li{
 
 #wrap,
 .user_show_name,
-.form-box{
+.form-box,
+.box a{
     color: #4e351e;
 }
 
 .box a{
-    color: cadetblue;
+    font-weight: bold;
 }
 
 p{
@@ -54,7 +55,12 @@ p{
 }
 
 #overwrap{
-    background-color: #f2f2e8;
+    /*background-color: #f2f2e8;*/
+    background-image: url("/images/paper.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #wrap{
@@ -63,6 +69,7 @@ p{
     text-align: -webkit-center;
     padding: 10px;
 }
+
 
 /* ========================================
     投稿
@@ -74,9 +81,9 @@ p{
     text-align: start;
     height: auto;
     margin: 15px;
-    border: solid 1px #d9d9d9;
+    /* border: solid 1px #796a58; */
     background-size: cover;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.6);
     display: flex;
     flex-direction: row;
     width: 400px;
@@ -117,12 +124,6 @@ p{
     line-height: 2.0;
 }
 
-.jumbotron {
-    background:url("/images/top-book.jpg") center no-repeat;
-    background-size: cover;
-    color: #fff;
-}
-
 .edit-delete{
     font-size: smaller;
 }
@@ -137,17 +138,9 @@ img{
     width: 500px;
 }
 
-/* ========================================
-    ログイン・新規登録
-========================================= */
-
-.btn-block{
-    margin: 10px;
-}
-
-.login{
-    width: -webkit-fill-available;
-    margin: 20px;
+.favorite-icon{
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .user_show_name{

@@ -17,36 +17,36 @@
   </head>
 
   <body>
-  <div id = "overwrap">
-    <%= render 'layouts/flashes' %>
-    <header>
-      <nav class="navbar navbar-dark navbar-right bg-dark" >
-        <% if current_user  %>
-          <%=link_to "book memory phrase",home_show_path %>
-        <% else %>
-          <%=link_to "book memory phrase","/"%>
-        <% end %>
-        <button class="navbar-toggler" type="button"
-            data-toggle="collapse"
-            data-target="#navmenu1"
-            aria-controls="navmenu1"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navmenu1">
-          <div class="navbar-nav">
-            <% if user_signed_in? %>
-              <li class="nav-item nav-link">現在のユーザー：<%= current_user.name %></li>
-              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"nav-item nav-link" %>
-              <%= link_to '投稿する', home_new_path,class:"nav-item nav-link" %>
-            <% end %>
+    <div id = "overwrap">
+      <%= render 'layouts/flashes' %>
+      <header>
+        <nav class="navbar navbar-dark navbar-right bg-dark" >
+          <% if current_user  %>
+            <%=link_to "book memory phrase",home_show_path %>
+          <% else %>
+            <%=link_to "book memory phrase","/"%>
+          <% end %>
+          <button class="navbar-toggler" type="button"
+              data-toggle="collapse"
+              data-target="#navmenu1"
+              aria-controls="navmenu1"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navmenu1">
+            <div class="navbar-nav">
+              <% if user_signed_in? %>
+                <li class="nav-item nav-link">現在のユーザー：<%= current_user.name %></li>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"nav-item nav-link" %>
+                <%= link_to '投稿する', home_new_path,class:"nav-item nav-link" %>
+              <% end %>
+            </div>
           </div>
-        </div>
-      </nav>
-    </header>
-    <%= yield %>
-  </div>
+        </nav>
+      </header>
+      <%= yield %>
+    </div>
     <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
