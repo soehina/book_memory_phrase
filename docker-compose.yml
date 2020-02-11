@@ -18,5 +18,21 @@ services:
       - .:/app_name
     ports:
       - "3000:3000"
+    depends_on:
+      - db
+      - redis
+    tty: true
+    stdin_open: true
     links:
       - db
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+
+  redis:
+    image: redis:5.0.5
+    ports:
+      - 6379:6379
+    volumes:
+      - ./redis:/data
+    command: redis-server --appendonly yes

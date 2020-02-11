@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
-  before_action :set_post, only: [:user_show, :edit, :update, :destroy]
-  before_action :authenticate_user, only: [:create, :new, :edit, :destroy]
+  before_action :set_post, only: [:user_show, :add_score, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:user_show, :create, :new, :edit, :destroy]
 
   def index
     @posts = Post.all.order(id: "DESC")
@@ -8,12 +8,18 @@ class HomeController < ApplicationController
 
   def show
     @posts = Post.all.order(id: "DESC")
+    # @ranking_favorite_data = (REDIS.zrevarangebyscore "favorites","+inf",0,withscores: true)
   end
 
   def user_show
     @user = @post.user
     @posts = @user.posts.order(id: "DESC")
+    # @ranking_favorite_data = (REDIS.zrevarangebyscore "favorites",10,0,withscores: true)
   end
+
+  # def add_score
+  #   REDIS.zincrby "favorites",1,@post.id
+  # end
 
   def new
     @post=Post.new
