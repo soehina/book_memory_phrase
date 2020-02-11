@@ -12,7 +12,7 @@ class HomeController < ApplicationController
 
   def user_show
     @user = @post.user
-    @posts = @user.posts
+    @posts = @user.posts.order(id: "DESC")
   end
 
   def new
