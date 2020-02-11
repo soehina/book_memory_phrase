@@ -3,11 +3,11 @@ class HomeController < ApplicationController
   before_action :authenticate_user, only: [:create, :new, :edit, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(id: "DESC")
   end
 
   def show
-    @posts = Post.all
+    @posts = Post.all.order(id: "DESC")
   end
 
   def user_show

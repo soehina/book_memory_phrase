@@ -18,33 +18,51 @@
 
   <body>
     <div id = "overwrap">
-      <%= render 'layouts/flashes' %>
-      <header>
-        <nav class="navbar navbar-dark navbar-right bg-dark" >
-          <% if current_user  %>
-            <%=link_to "book memory phrase",home_show_path %>
-          <% else %>
-            <%=link_to "book memory phrase","/"%>
-          <% end %>
-          <button class="navbar-toggler" type="button"
-              data-toggle="collapse"
-              data-target="#navmenu1"
-              aria-controls="navmenu1"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navmenu1">
-            <div class="navbar-nav">
+    <div class="title-top">
+      <% if user_signed_in?  %>
+        <p class="site-title">
+          <%=link_to "book memory phrase",home_show_path %>
+        </p>
+      <% else %>
+        <p class="site-title">
+          <%=link_to "book memory phrase","/"%>
+        </p>
+      <% end %>
+    </div>
+      <div class="cp_cont">
+        <input type="checkbox" id="cp_toggle03">
+        <div class="cp_mobilebar">
+          <label for="cp_toggle03" class="cp_menuicon">
+            <span></span>
+          </label>
+        </div>
+        <header class="cp_offcm03">
+          <nav>
+            <ul>
               <% if user_signed_in? %>
-                <li class="nav-item nav-link">現在のユーザー：<%= current_user.name %></li>
-                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"nav-item nav-link" %>
-                <%= link_to '投稿する', home_new_path,class:"nav-item nav-link" %>
+                <li><%=link_to "投稿一覧",home_show_path %></li>
+                <li>
+                  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete%>
+                </li>
+                <li>
+                  <%= link_to '投稿する', home_new_path %>
+                </li>
+              <% else %>
+                <li>
+                  <%=link_to "トップ","/"%>
+                </li>
+                <li>
+                  <%= link_to 'ログイン', new_user_session_path %>
+                </li>
+                <li>
+                  <%= link_to '新規登録',new_user_registration_path %>
+                </li>
               <% end %>
-            </div>
-          </div>
-        </nav>
-      </header>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <%= render 'layouts/flashes' %>
       <%= yield %>
     </div>
     <!-- bootstrap -->
