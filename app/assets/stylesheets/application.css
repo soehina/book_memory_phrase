@@ -339,9 +339,15 @@ img{
     font-size: larger;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:767px) {
     /*　画面サイズが1024px以下からはここを読み込む　*/
-    /* .box{
-        height: 100%;
-    } */
+    #overwrap{
+        /*background-color: #f2f2e8;*/
+        background-image: url("/images/movilepaper.jpg");
+    }
+
+    .box{
+        height: 90%;
+        background-color: rgba(255,255,255,0.0);
+    }
 }
