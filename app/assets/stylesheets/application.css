@@ -263,11 +263,10 @@ p{
 
 .box{
     writing-mode: vertical-rl;
-    padding: 25px;
+    padding: 15px;
     text-align: start;
     height: auto;
     margin: 15px;
-    /* border: solid 1px #796a58; */
     background-size: cover;
     background-color: rgba(255,255,255,0.4);
     display: flex;
@@ -280,7 +279,11 @@ p{
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.content-box{
+    margin-bottom: -30px;
 }
 
 .text{
@@ -296,10 +299,10 @@ p{
 }
 
 .name{
-    margin-right: -10px;
+    display: -webkit-box;
+    margin-bottom: 5px;
 }
 
-.name,
 .author,
 .edit-delete{
     text-align: end;
@@ -337,6 +340,14 @@ img{
     margin: 30px 0 10px 0;
     text-align: center;
     font-size: larger;
+}
+
+.icon{
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    object-fit: cover;
+    margin-right: 10px;
 }
 
 @media screen and (max-width:767px) {
