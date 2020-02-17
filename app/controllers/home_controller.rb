@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   before_action :set_post, only: [:user_show, :add_score, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:user_show, :create, :new, :edit, :destroy]
 
-  def index
+  def top
     @posts = Post.all.order(id: "DESC")
   end
 

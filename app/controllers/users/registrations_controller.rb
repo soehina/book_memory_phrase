@@ -57,7 +57,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def after_update_up_path_for(resource)
     # user_path(id: current_user.id)
-    home_show_path
+    home_show_path(resource)
   end
 
   # The path used after sign up for inactive accounts.

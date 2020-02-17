@@ -179,7 +179,7 @@ p{
     margin-right: 0;
     }
     .cp_offcm03 a {
-    padding: 20px;
+    padding: 6px 17px;
     }
     /* menu toggle */
     .cp_mobilebar {
@@ -263,10 +263,10 @@ p{
 
 .box{
     writing-mode: vertical-rl;
+    margin: 15px 0;
     padding: 15px;
     text-align: start;
     height: auto;
-    margin: 15px;
     background-size: cover;
     background-color: rgba(255,255,255,0.4);
     display: flex;
@@ -359,6 +359,7 @@ img{
 
     .box{
         height: 90%;
+        margin: 15px;
         background-color: rgba(255,255,255,0.0);
     }
 }
