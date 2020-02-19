@@ -8,18 +8,12 @@ class HomeController < ApplicationController
 
   def show
     @posts = Post.all.order(id: "DESC")
-    # @ranking_favorite_data = (REDIS.zrevarangebyscore "favorites","+inf",0,withscores: true)
   end
 
   def user_show
     @user = @post.user
     @posts = @user.posts.order(id: "DESC")
-    # @ranking_favorite_data = (REDIS.zrevarangebyscore "favorites",10,0,withscores: true)
   end
-
-  # def add_score
-  #   REDIS.zincrby "favorites",1,@post.id
-  # end
 
   def new
     @post=Post.new
@@ -46,12 +40,7 @@ class HomeController < ApplicationController
   end
 
   def update
-    @post.title = params[:title]
-    @post.author = params[:author]
-    @post.phrase = params[:phrase]
-    @post.content = params[:content]
-    @post.book_image = params[:book_image]
-    if @post.save
+    if @post.save(post_params)
       redirect_to(home_show_path)
     else
       render(home_edit_path)
@@ -74,6 +63,7 @@ class HomeController < ApplicationController
       :author,
       :phrase,
       :content,
+      :book_image,
       :user_id
     )
   end
