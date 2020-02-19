@@ -58,8 +58,8 @@ p{
 }
 
 #overwrap{
-    /*background-color: #f2f2e8;*/
-    background-image: url("/images/cover.jpg");
+    background-color: #ffffff;
+    /* background-image: url("/images/cover.jpg"); */
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -361,8 +361,8 @@ img{
 @media screen and (max-width:767px) {
     /*　画面サイズが1024px以下からはここを読み込む　*/
     #overwrap{
-        /*background-color: #f2f2e8;*/
-        background-image: url("/images/mobile_cover.jpg");
+        background-color: #ffffff;
+        /* background-image: url("/images/mobile_cover.jpg"); */
     }
 
     .site-title{
