@@ -34,7 +34,7 @@ h5{
 }
 
 header a{
-    color: #ffffff;
+    color: #585e6c;
 }
 
 header p,
@@ -46,7 +46,7 @@ header p,
 }
 
 .site-title{
-    color: #ffffff;
+    color: #585e6c;
 }
 
 .box a{
@@ -58,8 +58,8 @@ p{
 }
 
 #overwrap{
-    background-color: #ffffff;
-    /* background-image: url("/images/cover.jpg"); */
+    background-image: url("/images/cover.png");
+    border: 30px solid #ffffff;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -70,7 +70,7 @@ p{
     widows: 100%;
     height: auto;
     text-align: -webkit-center;
-    padding: 10px;
+    margin-top: 50px;
 }
 
 .alert{
@@ -80,14 +80,22 @@ p{
 /* ========================================
     ナビゲーション
 ========================================= */
-
-.site-title{
-    font-weight: bolder;
+#title-nav{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 0;
 }
 
 .title-top{
     padding-top: 15px;
     text-align: center;
+}
+
+.site-title{
+    font-weight: bolder;
+    margin: auto;
 }
 
 *, *:before, *:after {
@@ -103,9 +111,6 @@ p{
     }
     /* menu */
     .cp_offcm03 {
-    position: fixed;
-    top: 35px;
-    z-index: 5;
     left: 0;
     overflow: auto;
     width: 100%;
@@ -114,13 +119,17 @@ p{
     -webkit-transition: transform 0.3s ease-in;
     transition: transform 0.3s ease-in;
     text-align: center;
-    color: #4e351e;
     background-color: transparent;
     }
     .cp_offcm03 nav,
     .cp_offcm03 ul {
     height: 100%;
     }
+
+    .cp_offcm03 ul {
+        margin: 0;
+    }
+
     .cp_offcm03 li {
     display: inline-block;
     margin-right: -6px;
@@ -275,10 +284,10 @@ p{
     height: auto;
     background-size: cover;
     background-color: rgba(255,255,255,0.7);
-    /* background-color: #ffffff; */
     display: flex;
     flex-direction: row;
     width: 400px;
+    border: 1px solid #c5e1f1;
 }
 
 .image-box{
@@ -347,7 +356,7 @@ img{
     margin: 70px 0 10px 0;
     text-align: center;
     font-size: larger;
-    color: #fff;
+    color: #585e6c;
 }
 
 .icon{
@@ -360,23 +369,17 @@ img{
 
 @media screen and (max-width:767px) {
     /*　画面サイズが1024px以下からはここを読み込む　*/
-    #overwrap{
-        background-color: #ffffff;
-        /* background-image: url("/images/mobile_cover.jpg"); */
-    }
-
     .site-title{
         color: #3f5b68;
     }
 
     .box{
         height: 90%;
-        margin: 15px;
-        /* background-color: rgba(255,255,255,0.0); */
     }
 
     .user_show_name{
         color: #3f5b68;
         margin-top: 40px;
+        margin-bottom: -45px;
     }
 }

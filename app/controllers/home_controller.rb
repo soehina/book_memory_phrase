@@ -40,7 +40,7 @@ class HomeController < ApplicationController
   end
 
   def update
-    if @post.save(post_params)
+    if @post.update(post_params)
       redirect_to(home_show_path)
     else
       render(home_edit_path)
@@ -58,12 +58,13 @@ class HomeController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(
+    params.permit(
       :title,
       :author,
       :phrase,
       :content,
       :book_image,
+      :post_user,
       :user_id
     )
   end
