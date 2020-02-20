@@ -59,11 +59,11 @@ p{
 
 #overwrap{
     background-image: url("/images/cover.png");
-    border: 30px solid #ffffff;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    border: 30px solid #ffffff;
 }
 
 #wrap{
@@ -89,7 +89,7 @@ p{
 }
 
 .title-top{
-    padding-top: 15px;
+    padding-top: 5px;
     text-align: center;
 }
 
@@ -369,6 +369,10 @@ img{
 
 @media screen and (max-width:767px) {
     /*　画面サイズが1024px以下からはここを読み込む　*/
+    #title-nav{
+        background-color: transparent;
+    }
+
     .site-title{
         color: #3f5b68;
     }

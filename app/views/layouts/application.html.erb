@@ -18,8 +18,7 @@
 
   <body>
     <%= render 'layouts/flashes' %>
-    <div id = "overwrap">
-      <div id="title-nav">
+    <div id="title-nav">
         <div class="title-top">
           <% if user_signed_in? %>
             <a href='/home/show' class="site-title">book memory phrase</a>
@@ -65,7 +64,8 @@
             </nav>
           </header>
         </div>
-      </div>
+    </div>
+    <div id = "overwrap">
       <%= yield %>
     </div>
     <!-- bootstrap -->
