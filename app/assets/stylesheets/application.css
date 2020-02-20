@@ -33,6 +33,10 @@ h5{
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 header a{
     color: #585e6c;
 }
@@ -75,6 +79,22 @@ p{
 
 .alert{
     text-align: center;
+}
+
+.button-style,
+.input-submit{
+    background-color: rgba(75, 168, 255, 0.3);
+    text-align: center;
+    padding: 10px 40px;
+    border: none;
+    color: #3f5b68;
+}
+
+.button-style:hover,
+.input-submit:hover{
+    background-color: rgba(31, 173, 255, 0.5);
+    color: #ffffff;
+    transition: all 0.3s;
 }
 
 /* ========================================
@@ -345,6 +365,10 @@ img{
     text-align: center;
     margin: 20px 0;
     width: 500px;
+}
+
+.form-box textarea{
+    margin-bottom: 30px;
 }
 
 .favorite-icon{
