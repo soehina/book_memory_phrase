@@ -10,7 +10,11 @@
                         <% else %>
                             <image src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
                         <% end %>
-                        <%= link_to("#{post.post_user}", "/home/#{post.id}/user_show")%>
+                        <% if post.user.id != current_user.id %>
+                            <%= link_to("#{post.post_user}", "/home/#{post.id}/user_show")%>
+                        <% else %>
+                            <span><%= current_user.name %></span>
+                        <% end %>
                     </div>
                         <div class="image-box">
                             <h5><%= post.phrase %></h5>

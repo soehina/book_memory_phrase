@@ -53,7 +53,8 @@ header p,
     color: #585e6c;
 }
 
-.box a{
+.box a,
+.box span{
     font-weight: bold;
 }
 
@@ -303,7 +304,7 @@ p{
     margin: 25px 0;
     padding: 15px;
     text-align: start;
-    height: auto;
+    height: 650px;
     background-size: cover;
     background-color: rgba(255,255,255,0.7);
     display: flex;
@@ -393,6 +394,13 @@ img{
     margin-right: 10px;
 }
 
+.user-img img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    margin-bottom: 15px;
+}
+
 @media screen and (max-width:767px) {
     /*　画面サイズが1024px以下からはここを読み込む　*/
     #title-nav{
@@ -401,10 +409,6 @@ img{
 
     .site-title{
         color: #3f5b68;
-    }
-
-    .box{
-        height: 90%;
     }
 
     .user_show_name{
