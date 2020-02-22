@@ -1,0 +1,9 @@
+<div class="myinfo">
+<% if current_user.image? %>
+    <img src='<%= current_user.image %>' class="icon" alt="ユーザーアイコン">
+<% else %>
+    <image src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
+<% end %>
+<h1><%= current_user.name%></h1>
+</div>
+<%= render 'shared/show' %>

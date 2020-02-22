@@ -164,6 +164,9 @@ p{
     .cp_offcm03 a:hover {
     text-decoration: none;
     }
+    .cp_offcm03 a i{
+        font-size: larger;
+    }
     /* menu toggle */
     #cp_toggle03 {
     display: none;
@@ -201,7 +204,6 @@ p{
     width: 250px;
     height: 100%;
     padding-top: 60px;
-    color: #4e351e;
     background-color: transparent;
     }
     .cp_offcm03 nav {
@@ -213,7 +215,7 @@ p{
     margin-right: 0;
     }
     .cp_offcm03 a {
-    padding: 6px 17px;
+    padding: 20px 17px;
     color: #3f5b68;
     }
     /* menu toggle */

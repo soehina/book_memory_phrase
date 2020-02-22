@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/show'
   get 'home/top'=>'home#top'
   get 'home/show' => 'home#show'
   get 'home/:id/user_show' => 'home#user_show'
