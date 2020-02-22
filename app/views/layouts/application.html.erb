@@ -38,16 +38,19 @@
               <ul>
                 <% if user_signed_in? %>
                   <li>
-                    <a href='/home/show'>投稿一覧 <i class="fas fa-book-open"></i></a>
+                    <a href='/home/show'><i class="fas fa-book-open"></i></a>
                   </li>
                   <li>
-                    <a href='/home/new'>投稿する <i class="fas fa-pen-nib"></i></a>
+                    <a href='/home/new'><i class="fas fa-pen-nib"></i></a>
                   </li>
                   <li>
-                    <a href='/users/edit'>編集 <i class="fas fa-user-edit"></i></a>
+                    <a href='/users/show'><i class="fas fa-user"></i></a>
                   </li>
                   <li>
-                    <a href='/users/sign_out'>ログアウト <i class="fas fa-sign-out-alt"></i></a>
+                    <a href='/users/edit'><i class="fas fa-user-edit"></i></a>
+                  </li>
+                  <li>
+                    <a href='/users/sign_out'><i class="fas fa-sign-out-alt"></i></a>
                   </li>
                 <% else %>
                   <li>

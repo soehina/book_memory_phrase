@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
     def authenticate_user
         if current_user == nil
-            redirect_to("/")
+            home_top_path
         end
     end
 
