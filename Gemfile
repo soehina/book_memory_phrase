@@ -73,3 +73,6 @@ gem 'bootstrap', '~> 4.3.1'
 
 #carriewaveの追加
 gem 'carrierwave'
+
+#kaminariの追加
+gem 'kaminari'
