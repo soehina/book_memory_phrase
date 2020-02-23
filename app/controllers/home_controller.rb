@@ -3,11 +3,14 @@ class HomeController < ApplicationController
   before_action :authenticate_user!, only: [:user_show, :create, :new, :edit, :destroy]
 
   def top
-    @posts = Post.all.order(id: "DESC")
   end
 
   def show
-    @posts = Post.all.order(id: "DESC")
+    @posts = Post.page(params[:page]).per(20)
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def user_show
