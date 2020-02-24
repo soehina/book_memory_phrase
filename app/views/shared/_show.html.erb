@@ -1,6 +1,6 @@
 <div id="wrap">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" id="infiniteScrollingContainer">
             <% @posts.each do |post| %>
                 <div class="book-img col-lg-4 col-md-6 col-sm-12 center-block mx-auto">
                     <div class="box">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             <% end %>
-            <%= paginate @posts, :remote => true %>
+            <%= paginate @posts %>
         </div>
         <div>
         </div>

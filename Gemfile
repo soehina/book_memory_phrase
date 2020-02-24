@@ -76,3 +76,6 @@ gem 'carrierwave'
 
 #kaminariの追加
 gem 'kaminari'
+
+#ajax
+gem 'rails-ujs'
