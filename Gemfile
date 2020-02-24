@@ -79,3 +79,6 @@ gem 'kaminari'
 
 #ajax
 gem 'rails-ujs'
+
+# jquery-turbolinks
+gem "jquery-turbolinks"

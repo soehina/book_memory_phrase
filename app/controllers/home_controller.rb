@@ -7,7 +7,7 @@ class HomeController < ApplicationController
   end
 
   def show
-    @posts = Post.all.page(params[:page]).order(id: "DESC").per(5)
+    @posts = Post.all.page(params[:page]).order(id: "DESC")
   end
 
   def user_show
