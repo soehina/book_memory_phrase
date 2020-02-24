@@ -401,6 +401,10 @@ img{
     margin-bottom: 15px;
 }
 
+nav.pagination {
+    display: none;
+}
+
 @media screen and (max-width:767px) {
     /*　画面サイズが1024px以下からはここを読み込む　*/
     #title-nav{
