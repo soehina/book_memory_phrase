@@ -23,6 +23,8 @@ body{
     font-weight: 100;
     font-family:serif !important;
     font-size: medium;
+    animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
 }
 
 h2{
@@ -37,7 +39,7 @@ a{
     text-decoration: none;
 }
 
-header a{
+nav ul li a{
     color:　#5b565c;
 }
 
@@ -46,7 +48,11 @@ header p,
 .user_show_name,
 .form-box,
 .box a{
-    color: #3f5b68;
+    color: #7b777c;
+}
+
+.alert{
+    z-index: 3;
 }
 
 .site-title{
@@ -98,6 +104,12 @@ p{
     transition: all 0.3s;
 }
 
+.form-box{
+    background: #fff;
+    padding: 20px;
+    border-radius: 25px;
+}
+
 /* ========================================
     ナビゲーション
 ========================================= */
@@ -105,8 +117,7 @@ p{
     position: fixed;
     width: 100%;
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.5);
-    top: 0;
+    top: 30;
 }
 
 .title-top{
@@ -147,8 +158,13 @@ p{
     height: 100%;
     }
 
-    .cp_offcm03 ul {
+    .cp_offcm03{
         margin: 0;
+        opacity: 0;
+    }
+
+    .cp_offcm03:hover{
+        opacity: 1;
     }
 
     .cp_offcm03 li {
@@ -156,6 +172,7 @@ p{
     margin-right: -6px;
     border: none;
     }
+
     .cp_offcm03 a {
     display: block;
     padding: 12px 45px;
@@ -210,6 +227,10 @@ p{
     .cp_offcm03 nav {
     background: transparent;
     width: min-content;
+    }
+
+    .cp_offcm03{
+        opacity: 1;
     }
     .cp_offcm03 li {
     display: block;
@@ -306,10 +327,10 @@ p{
     text-align: start;
     height: 650px;
     background-size: cover;
-    background-color: rgba(255,255,255,0.7);
+    background-color: #ffffff;
     display: flex;
     flex-direction: row;
-    width: 400px;
+    width: 380px;
     border: 1px solid #c5e1f1;
 }
 
@@ -394,10 +415,18 @@ img{
     margin-right: 10px;
 }
 
-.user-img img{
+.user-img img,
+.show-icon img{
     width: 80px;
     height: 80px;
     border-radius: 100px;
+}
+
+.show-icon img{
+    margin: 0;
+}
+
+.user-img img{
     margin-bottom: 15px;
 }
 
@@ -419,5 +448,9 @@ nav.pagination {
         color: #3f5b68;
         margin-top: 40px;
         margin-bottom: -45px;
+    }
+
+    .form-box{
+        width: 450px;
     }
 }

@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   post 'home/:id/destroy' => 'home#destroy'
 
   devise_scope :user do
-    root "users/sessions#new"
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
@@ -21,7 +20,7 @@ Rails.application.routes.draw do
     get 'home/show',:to => 'devise/registrations#edit',:as => :user_root
   end
 
-  root :to => 'home#top'
+  root to: 'home#top'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
