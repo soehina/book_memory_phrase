@@ -14,20 +14,18 @@
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/c6599c59c4.js" crossorigin="anonymous"></script>
 
-    <!-- jsquroll -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
   </head>
 
   <body>
     <%= render 'layouts/flashes' %>
+    <div class="title-top">
+      <% if user_signed_in? %>
+        <a href='/home/show' class="site-title">book memory phrase</a>
+      <% else %>
+        <a href='/' class="site-title">book memory phrase</a>
+      <% end %>
+    </div>
     <div id="title-nav">
-        <div class="title-top">
-          <% if user_signed_in? %>
-            <a href='/home/show' class="site-title">book memory phrase</a>
-          <% else %>
-            <a href='/' class="site-title">book memory phrase</a>
-          <% end %>
-        </div>
         <div class="cp_cont">
           <input type="checkbox" id="cp_toggle03">
           <div class="cp_mobilebar">
