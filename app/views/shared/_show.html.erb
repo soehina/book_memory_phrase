@@ -1,32 +1,28 @@
 <div id="wrap">
-    <div class="container-fluid">
-        <div class="row scrolling-container">
+    <div class="container-fluid page">
+        <div class="row jscroll scrolling-container">
             <% @posts.each do |post| %>
                 <div class="book-img col-lg-4 col-md-6 col-sm-12 center-block mx-auto">
                     <div class="box">
-                    <div class="name">
-                        <% if post.user.image? %>
-                            <img src='<%= post.user.image %>' class="icon" alt="ユーザーアイコン">
-                        <% else %>
-                            <image src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
-                        <% end %>
-                        <% if post.user.id != current_user.id %>
-                            <%= link_to("#{post.post_user}", "/home/#{post.id}/user_show")%>
-                        <% else %>
-                            <span><%= current_user.name %></span>
-                        <% end %>
-                    </div>
+                        <div class="name">
+                            <% if post.user.image? %>
+                                <img src='<%= post.user.image %>' class="icon" alt="ユーザーアイコン">
+                            <% else %>
+                                <image src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
+                            <% end %>
+                            <% if post.user.id != current_user.id %>
+                                <%= link_to("#{post.post_user}", "/home/#{post.id}/user_show")%>
+                            <% else %>
+                                <span><%= current_user.name %></span>
+                            <% end %>
+                        </div>
                         <div class="image-box">
                             <h5><%= post.phrase %></h5>
                             <img src='<%= post.book_image %>' class="img-fluid d-block">
                         </div>
                         <div class="content-box">
-                            <p class="title">
-                                『<%= post.title %>』
-                            </p>
-                            <p class="author">
-                                著者　<%= post.author %>
-                            </p>
+                            <p class="title">『<%= post.title %>』</p>
+                            <p class="author">著者　<%= post.author %></p>
                             <p>★ おすすめポイント</p>
                             <p class="content">
                                 <%= post.content%>
@@ -38,14 +34,10 @@
                                 <% end %>
                             </p>
                         </div>
-                            <div class="favorite-icon">
-                                <i class="far fa-star"></i>
-                            </div>
+                        <div class="favorite-icon"><i class="far fa-star"></i></div>
                     </div>
                 </div>
             <% end %>
         </div>
-        <div>
-        </div>
-    </div>
+<   /div>
 </div>

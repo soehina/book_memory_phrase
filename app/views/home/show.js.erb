@@ -1,8 +1,0 @@
-$("#pictures").append(
-    "<div class='page'>
-        <%=
-            escape_javascript(render('search_result',
-            :locals => { :tags => @picture.tag_list }))
-        %>
-    </div>"
-);
