@@ -81,4 +81,7 @@ gem 'kaminari'
 gem 'rails-ujs'
 
 # jquery-turbolinks
-gem "jquery-turbolinks"
+gem 'jquery-turbolinks'
+
+#jquery-infinite-pages
+gem 'jquery-infinite-pages'
