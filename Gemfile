@@ -74,14 +74,6 @@ gem 'bootstrap', '~> 4.3.1'
 #carriewaveの追加
 gem 'carrierwave'
 
-#kaminariの追加
-gem 'kaminari'
-
-#ajax
-gem 'rails-ujs'
-
-# jquery-turbolinks
-gem 'jquery-turbolinks'
-
-#jquery-infinite-pages
-gem 'jquery-infinite-pages'
+#deviseの日本語化
+gem 'devise-i18n'
+gem 'devise-i18n-views'
