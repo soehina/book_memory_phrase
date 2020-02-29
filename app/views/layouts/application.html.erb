@@ -14,16 +14,15 @@
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/c6599c59c4.js" crossorigin="anonymous"></script>
 
+    <!-- googlefonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
     <%= render 'layouts/flashes' %>
     <div class="title-top">
-      <% if user_signed_in? %>
-        <a href='/home/show' class="site-title">book memory phrase</a>
-      <% else %>
         <a href='/' class="site-title">book memory phrase</a>
-      <% end %>
     </div>
     <div id="title-nav">
         <div class="cp_cont">
@@ -36,9 +35,12 @@
           <header class="cp_offcm03">
             <nav>
               <ul>
+                <li>
+                  <a href='/'><i class="fas fa-home"></i></a>
+                </li>
                 <% if user_signed_in? %>
                   <li>
-                    <a href='/home/show'><i class="fas fa-book-open"></i></a>
+                    <a href='/home/index'><i class="fas fa-book-open"></i></a>
                   </li>
                   <li>
                     <a href='/home/new'><i class="fas fa-pen-nib"></i></a>
@@ -55,9 +57,6 @@
                 <% else %>
                   <li>
                     <a href='/users/sign_up'><i class="fas fa-user-plus"></i></a>
-                  </li>
-                  <li>
-                    <a href='/home/top'><i class="fas fa-home"></i></a>
                   </li>
                   <li>
                     <a href='/users/sign_in'><i class="fas fa-sign-in-alt"></i></a>

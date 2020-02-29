@@ -43,12 +43,14 @@ nav ul li a{
     color:　#5b565c;
 }
 
+.title-top a,
 header p,
 #wrap,
 .user_show_name,
 .form-box,
 .box a{
     color: #7b777c;
+    font-family: "Noto Serif JP";
 }
 
 .alert{
@@ -331,7 +333,6 @@ p{
     display: flex;
     flex-direction: row;
     width: 380px;
-    border: 1px solid #c5e1f1;
 }
 
 .image-box{

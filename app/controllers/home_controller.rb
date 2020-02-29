@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   def top
   end
 
-  def show
+  def index
     @posts = Post.all.order(id: "DESC")
   end
 
@@ -29,7 +29,7 @@ class HomeController < ApplicationController
       user_id: current_user.id
     )
     if @post.save
-      redirect_to(home_show_path)
+      redirect_to(home_index_path)
     else
       render(home_new_path)
     end
@@ -40,7 +40,7 @@ class HomeController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to(home_show_path)
+      redirect_to(home_index_path)
     else
       render(home_edit_path)
     end
@@ -48,7 +48,7 @@ class HomeController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to(home_show_path)
+    redirect_to(home_index_path)
   end
 
   private
