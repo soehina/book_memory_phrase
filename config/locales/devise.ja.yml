@@ -67,6 +67,7 @@ ja:
           user:
             name: 名前
             password: パスワード
-            password_confirmation: パスワード確認
+            password_confirmation: パスワードの確認
             email: メールアドレス
+            image: 画像
 

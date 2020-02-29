@@ -48,7 +48,9 @@ header p,
 #wrap,
 .user_show_name,
 .form-box,
-.box a{
+.box a,
+input,
+textarea{
     color: #7b777c;
     font-family: "Noto Serif JP";
 }
@@ -110,6 +112,13 @@ p{
     background: #fff;
     padding: 20px;
     border-radius: 25px;
+    text-align: center;
+    margin: 20px 0;
+    width: 500px;
+}
+
+.form-box textarea{
+    margin-bottom: 30px;
 }
 
 /* ========================================
@@ -230,9 +239,9 @@ p{
     background: transparent;
     width: min-content;
     }
-
     .cp_offcm03{
         opacity: 1;
+        padding-top: 30px;
     }
     .cp_offcm03 li {
     display: block;
@@ -386,16 +395,6 @@ img{
     width: 200px;
 }
 
-.form-box{
-    text-align: center;
-    margin: 20px 0;
-    width: 500px;
-}
-
-.form-box textarea{
-    margin-bottom: 30px;
-}
-
 .favorite-icon{
     display: flex;
     flex-direction: column-reverse;
@@ -452,6 +451,6 @@ nav.pagination {
     }
 
     .form-box{
-        width: 450px;
+        width: 400px;
     }
 }
