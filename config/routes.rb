@@ -14,9 +14,10 @@ Rails.application.routes.draw do
     get '/useers/sign_in' => 'users/sessions#new'
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  # devise_for :users, :controllers => {
-  #     sessions: 'users/sessions'
-  # }
+  devise_for :users, :controllers => {
+      sessions: 'users/sessions'
+  }
+
   as :user do
     get 'home/index',:to => 'devise/registrations#edit',:as => :user_root
   end
