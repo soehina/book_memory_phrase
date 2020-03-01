@@ -7,8 +7,6 @@ class Post < ApplicationRecord
 
     belongs_to :user
 
-    # after_create{ REDIS.zincrby "favorites",1,self.id }
-
     def user
         return User.find_by(id: self.user_id)
     end
