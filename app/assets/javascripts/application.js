@@ -15,3 +15,9 @@
 //= require_tree .
 //= require jquery
 //= require rails-ujs
+
+// 初期値
+var inital = 0;
+function change(color){
+    var obj = document.getElementsByClassName(color);
+}
