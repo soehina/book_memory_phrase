@@ -1,18 +1,18 @@
 <%- if controller_name != 'sessions' %>
   <div class="btn-box">
-    <%= link_to "ログイン", new_session_path(resource_name),class:'btn btn-info' %>
+    <%= link_to "ログイン", new_session_path(resource_name) %>
   </div>
 <% end %>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
   <div class="btn-box">
-    <%= link_to "新規登録", new_registration_path(resource_name),class:'button-style' %>
+    <%= link_to "新規登録", new_registration_path(resource_name) %>
   </div>
 <% end %>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
 <div class="btn-box">
-  <%= link_to "パスワードをお忘れの方はこちら", new_password_path(resource_name),class:'button-style' %>
+  <%= link_to "パスワードをお忘れの方はこちら", new_password_path(resource_name) %>
 </div>
 <% end %>
 
