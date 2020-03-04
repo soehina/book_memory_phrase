@@ -19,16 +19,8 @@ class HomeController < ApplicationController
   end
 
   def create
-    @post = Post.new(
-      title: params[:title],
-      author: params[:author],
-      phrase: params[:phrase],
-      content: params[:content],
-      book_image: params[:book_image],
-      post_user: current_user.name,
-      user_id: current_user.id
-    )
-    if @post.save
+    @post=Post.create(post_params)
+    if @post.save(post_params)
       redirect_to(home_index_path)
     else
       render(home_new_path)
@@ -65,6 +57,9 @@ class HomeController < ApplicationController
       :book_image,
       :post_user,
       :user_id
+    ).merge(
+      post_user: current_user.name,
+      user_id: current_user.id
     )
   end
 end
