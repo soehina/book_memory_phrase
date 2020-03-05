@@ -16,8 +16,7 @@
 //= require jquery
 //= require rails-ujs
 
-// 初期値
-var inital = 0;
-function change(color){
-    var obj = document.getElementsByClassName(color);
-}
+function changeColor(icon){
+    var icon = this.document.querySelector('.icon-btn i');
+    icon.style.color = '#fff07d';
+};
