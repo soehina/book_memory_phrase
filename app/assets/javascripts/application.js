@@ -16,7 +16,12 @@
 //= require jquery
 //= require rails-ujs
 
-function changeColor(icon){
-    var icon = this.document.querySelector('.icon-btn i');
-    icon.style.color = '#fff07d';
-};
+document.addEventListener("turbolinks:load",function(){
+    var btns = document.querySelectorAll('.icon-btn');
+    var flag = false;
+    for(var i = 0; i < btns.length; i++){
+        btns[i].addEventListener('click',function(){
+            this.style.color = "#fff362";
+        },false);
+    }
+},false);
