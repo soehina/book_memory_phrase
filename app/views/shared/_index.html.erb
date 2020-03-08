@@ -26,7 +26,7 @@
                             <p>★ おすすめポイント</p>
                             <p class="content">
                                 <%= post.content%>
-                                <% if user_signed_in? && current_user.id == post.user_id %>
+                                <% if user_signed_in? && current_user.id == post.post_user_id %>
                                     <span class="edit-delete">
                                         <%=link_to("編集" , "/home/#{post.id}/edit",class:"text-muted") %>
                                         <%=link_to("削除" , "/home/#{post.id}/destroy",method: :post,class:"text-muted") %>

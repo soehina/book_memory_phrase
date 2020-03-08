@@ -7,11 +7,13 @@ class HomeController < ApplicationController
 
   def index
     @posts = Post.all.order(id: "DESC")
+    @like = Like.new
   end
 
   def user_show
     @user = @post.user
     @posts = @user.posts.order(id: "DESC")
+    @like = Like.new
   end
 
   def new
@@ -56,10 +58,10 @@ class HomeController < ApplicationController
       :content,
       :book_image,
       :post_user,
-      :user_id
+      :post_user_id
     ).merge(
       post_user: current_user.name,
-      user_id: current_user.id
+      post_user_id: current_user.id
     )
   end
 end

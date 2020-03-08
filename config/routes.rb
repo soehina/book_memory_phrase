@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   post 'home/:id/update' => 'home#update'
   post 'home/:id/destroy' => 'home#destroy'
 
+  resources :likes, only:[:create, :destroy]
+
   get 'users/show'
 
   devise_scope :user do
