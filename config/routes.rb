@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get '/' => 'home#top'
   get 'home/index' => 'home#index'
   get 'home/:id/user_show' => 'home#user_show'
   get 'home/new' => 'home#new'
@@ -8,7 +7,8 @@ Rails.application.routes.draw do
   post 'home/:id/update' => 'home#update'
   post 'home/:id/destroy' => 'home#destroy'
 
-  resources :likes, only:[:create, :destroy]
+  post 'likes/create' => 'likes#create'
+  delete 'likes/:id/destroy' => 'likes#destroy'
 
   get 'users/show'
 
@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   as :user do
     get 'home/index',:to => 'devise/registrations#edit',:as => :user_root
   end
+
+  root to: 'home#top'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

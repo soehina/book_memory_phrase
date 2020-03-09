@@ -13,7 +13,7 @@
                             <% if post.user.id != current_user.id %>
                                 <%= link_to("#{post.post_user}", "/home/#{post.id}/user_show")%>
                             <% else %>
-                                <span><%= current_user.name %></span>
+                                <%= link_to("#{current_user.name}","/users/show") %>
                             <% end %>
                         </div>
                         <div class="image-box">
@@ -35,9 +35,19 @@
                             </p>
                         </div>
                         <div class="favorite-icon">
-                            <button class="icon-btn">
-                                <i class="fa-lg fas fa-star"></i>
-                            </button>
+                            <% if post.like_by?(current_user) %>
+                                <%= form_tag(likes_path,method: :delete) do %>
+                                    <button type="submit" class="icon-btn">
+                                        <i class="fa-lg fas fa-star"></i>
+                                    </button>
+                                <% end %>
+                            <% else %>
+                                <%= form_tag(likes_create_path,method: :post) do %>
+                                    <button type="submit class="icon-btn">
+                                        <i class="fa-lg fas fa-star"></i>
+                                    </button>
+                                <% end %>
+                            <% end %>
                         </div>
                     </div>
                 </div>

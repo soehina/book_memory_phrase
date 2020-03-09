@@ -7,13 +7,11 @@ class HomeController < ApplicationController
 
   def index
     @posts = Post.all.order(id: "DESC")
-    @like = Like.new
   end
 
   def user_show
     @user = @post.user
     @posts = @user.posts.order(id: "DESC")
-    @like = Like.new
   end
 
   def new
