@@ -18,7 +18,6 @@
 
 document.addEventListener('turbolinks:load',function(){
     var btns = document.querySelectorAll('.icon-btn');
-    var flag = false;
     for(var i = 0; i < btns.length; i++){
         btns[i].addEventListener('click',function(){
             this.style.color = '#fff362';

@@ -79,3 +79,6 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 
 gem 'nokogiri'
+
+# jsファイルで変数を使う
+gem 'gon'

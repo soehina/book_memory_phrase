@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   post 'home/:id/update' => 'home#update'
   post 'home/:id/destroy' => 'home#destroy'
 
-  post 'likes/create' => 'likes#create'
-  delete 'likes/:id/destroy' => 'likes#destroy'
+  resources :home, shallow: true do
+    resource :likes, only: %i[create destroy]
+    get :likes, on: :collection
+  end
 
   get 'users/show'
 

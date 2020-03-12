@@ -399,13 +399,6 @@ img{
 .favorite-icon{
     display: flex;
     flex-direction: column-reverse;
-    & button{
-        width: 25px;
-        height: 25px;
-        background-color: $c-white;
-        border: none;
-        color: $favorite-icon;
-    }
 }
 
 .user_show_name{
@@ -421,6 +414,10 @@ img{
     border-radius: 100px;
     object-fit: cover;
     margin-right: 10px;
+}
+
+.icon-btn{
+    color: $favorite-icon;
 }
 
 .user-img img,

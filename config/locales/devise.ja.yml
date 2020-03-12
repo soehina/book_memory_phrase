@@ -70,4 +70,8 @@ ja:
             password_confirmation: パスワードの確認
             email: メールアドレス
             image: 画像
+          like:
+            like: いいねしました！
+            not_like: いいねをはずしました
+
 
