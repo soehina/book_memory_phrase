@@ -7,15 +7,15 @@ Rails.application.routes.draw do
   post 'home/:id/update' => 'home#update'
   post 'home/:id/destroy' => 'home#destroy'
 
-  resources :home, shallow: true do
-    resource :likes, only: %i[create destroy]
-    get :likes, on: :collection
+  resources :posts, shallow: true do
+    post 'add' => 'likes#create'
+    delete '/add' => 'likes#destroy'
   end
 
   get 'users/show'
 
   devise_scope :user do
-    get '/useers/sign_in' => 'users/sessions#new'
+    get '/users/sign_in' => 'users/sessions#new'
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   devise_for :users, :controllers => {

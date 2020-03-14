@@ -25,7 +25,7 @@
   <body>
     <%= render 'layouts/flashes' %>
     <div class="title-top">
-        <a href='/' class="site-title">book memory phrase</a>
+        <%= link_to('book memory phrase','/',class:"site-title") %>
     </div>
     <div id="title-nav">
         <div class="cp_cont">
@@ -39,30 +39,41 @@
             <nav>
               <ul>
                 <li>
-                  <a href='/'><i class="fas fa-home"></i></a>
+                  <%= link_to('/') do %>
+                    <i class="fas fa-home"></i>
+                  <% end %>
                 </li>
                 <% if user_signed_in? %>
                   <li>
-                    <a href='/home/index'><i class="fas fa-book-open"></i></a>
+                    <%= link_to(home_index_path) do %>
+                      <i class="fas fa-book-open"></i>
+                    <% end %>
                   </li>
                   <li>
-                    <a href='/home/new'><i class="fas fa-pen-nib"></i></a>
+                    <%= link_to(home_new_path) do %>
+                      <i class="fas fa-pen-nib"></i>
+                    <% end %>
                   </li>
                   <li>
-                    <a href='/users/show'><i class="fas fa-user"></i></a>
+                    <%= link_to(users_show_path) do %>
+                      <i class="fas fa-user"></i>
+                    <% end %>
                   </li>
                   <li>
-                    <a href='/users/edit'><i class="fas fa-user-edit"></i></a>
-                  </li>
-                  <li>
-                    <a href='/users/sign_out'><i class="fas fa-sign-out-alt"></i></a>
+                    <%= link_to(users_sign_out_path) do %>
+                      <i class="fas fa-sign-out-alt"></i>
+                    <% end %>
                   </li>
                 <% else %>
                   <li>
-                    <a href='/users/sign_up'><i class="fas fa-user-plus"></i></a>
+                    <%= link_to(new_user_registration_path) do %>
+                      <i class="fas fa-user-plus"></i>
+                    <% end %>
                   </li>
                   <li>
-                    <a href='/users/sign_in'><i class="fas fa-sign-in-alt"></i></a>
+                    <%= link_to(users_sign_in_path) do %>
+                      <i class="fas fa-sign-in-alt"></i>
+                    <% end %>
                   </li>
                 <% end %>
               </ul>

@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   before_action :set_post, only: [:user_show, :add_score, :edit, :update, :destroy]
-  before_action :set_liked,only: [:index, :user_show]
+  # before_action :set_liked,only: [:index, :user_show]
   before_action :authenticate_user!, only: [:user_show, :create, :new, :edit, :destroy]
 
   def top
@@ -50,11 +50,11 @@ class HomeController < ApplicationController
     @post = Post.find_by(id: params[:id])
   end
 
-  def set_liked
-    @like = Like.find_by(id: params[:id])
-    # gon.like_user_id = @like.user_id
-    gon.current_user_id = current_user.id
-  end
+  # def set_liked
+  #   @like = Like.find_by(id: params[:id])
+  #   gon.like_user_id = @like.user_id
+  #   gon.current_user_id = current_user.id
+  # end
 
   def post_params
     params.permit(
