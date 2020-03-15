@@ -62,6 +62,13 @@ textarea{
     font-family: "Noto Serif JP";
 }
 
+i{
+    color: $textcolor;
+    &:hover{
+        color: $linkcolor;
+    }
+}
+
 .alert{
     z-index: 3;
 }

@@ -1,7 +1,7 @@
+<div class="user-favorite">ブックマーク一覧</div>
 <div id="wrap">
     <div class="container-fluid">
         <div class="row">
-            <div class="user-favorite">ブックマーク一覧</div>
             <% @likes.each do |like| %>
                 <div class="book-img col-lg-4 col-md-6 col-sm-12 center-block mx-auto">
                     <div class="box">
@@ -30,13 +30,13 @@
                                 <% if user_signed_in? && current_user.id == like.post_user_id %>
                                     <span class="edit-delete">
                                         <%=link_to("編集" , "/home/#{like.id}/edit",class:"text-muted") %>
-                                        <%=link_to("削除" , "/home/#{post.id}/destroy",method: :post,class:"text-muted") %>
+                                        <%=link_to("削除" , "/home/#{like.id}/destroy",method: :post,class:"text-muted") %>
                                     </span>
                                 <% end %>
                             </p>
                         </div>
-                        <div class="favorite-icon">
-                            <%= render 'home/like', post: like %>
+                        <div class="favorite-icon" id="like-btn-<%= like.id %>">
+                            <%= render 'likes/like', post: like %>
                         </div>
                     </div>
                 </div>

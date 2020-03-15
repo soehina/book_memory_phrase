@@ -34,8 +34,8 @@
                                 <% end %>
                             </p>
                         </div>
-                        <div class="favorite-icon">
-                            <%= render 'home/like', post: post %>
+                        <div class="favorite-icon" id="like-btn-<%= post.id %>">
+                            <%= render 'likes/like', post: post %>
                         </div>
                     </div>
                 </div>

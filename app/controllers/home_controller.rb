@@ -13,7 +13,6 @@ class HomeController < ApplicationController
   def user_show
     @user = @post.user
     @posts = @user.posts.order(id: "DESC")
-    # @likes = @user.liked_posts.includes(:user).recent
   end
 
   def new
