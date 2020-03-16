@@ -19,11 +19,12 @@
     まとめて指定
 ========================================= */
 $textcolor: #7b777c;
-$linkcolor: #5b565c;
+$linkcolor: #3e3a3f;
 $c-white: #ffffff;
 $button-color: rgba(75, 168, 255, 0.3);
 $button-hover-color: rgba(31, 173, 255, 0.5);
-$favorite-icon: rgb(167, 228, 247);
+$like-icon: #a9dee6;
+$liked-icon: #ff949c;
 
 
 body{
@@ -380,9 +381,23 @@ p{
     font-size: 17px;
 }
 
+.box-head{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
 .name{
     display: -webkit-box;
     margin-bottom: 5px;
+}
+
+.edit-trash{
+    display: flex;
+    flex-direction: column-reverse;
+    & i{
+        margin: 0 10px;
+    }
 }
 
 .author,
@@ -423,8 +438,12 @@ img{
     margin-right: 10px;
 }
 
-.icon-btn{
-    color: $favorite-icon;
+.not-like{
+    color: $like-icon;
+}
+
+.liked{
+    color: $liked-icon;
 }
 
 .user-img img,

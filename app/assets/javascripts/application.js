@@ -16,11 +16,10 @@
 //= require jquery
 //= require rails-ujs
 
-document.addEventListener('turbolinks:load',function(){
-    var btns = document.querySelectorAll('.icon-btn');
-    for(var i = 0; i < btns.length; i++){
-        btns[i].addEventListener('click',function(){
-            this.style.color = '#fff362';
-        },false);
-    }
-},false);
+// document.addEventListener('turbolinks:load',function(){
+//     var btns = document.querySelectorAll('.icon-btn');
+//     for(var i = 0; i < btns.length; i++){
+//         btns[i].addEventListener('click',function(){
+//         },false);
+//     }
+// },false);

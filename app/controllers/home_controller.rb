@@ -24,7 +24,7 @@ class HomeController < ApplicationController
     if @post.save(post_params)
       redirect_to(home_index_path)
     else
-      render(home_new_path)
+      render action: :new
     end
   end
 
@@ -35,7 +35,7 @@ class HomeController < ApplicationController
     if @post.update(post_params)
       redirect_to(home_index_path)
     else
-      render(home_edit_path)
+      render action: :edit
     end
   end
 

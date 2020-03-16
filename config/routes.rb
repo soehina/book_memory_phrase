@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post 'home/:id/update' => 'home#update'
   post 'home/:id/destroy' => 'home#destroy'
 
-  resources :posts, shallow: true do
+  resources :posts do
     post 'add' => 'likes#create'
     delete '/add' => 'likes#destroy'
   end
