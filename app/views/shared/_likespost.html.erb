@@ -2,44 +2,57 @@
 <div id="wrap">
     <div class="container-fluid">
         <div class="row">
-            <% @likes.each do |like| %>
+            <% if @likes.empty? %>
                 <div class="book-img col-lg-4 col-md-6 col-sm-12 center-block mx-auto">
-                    <div class="box">
-                        <div class="name">
-                            <% if like.user.image? %>
-                                <img src='<%= like.user.image %>' class="icon" alt="ユーザーアイコン">
-                            <% else %>
-                                <image src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
-                            <% end %>
-                            <% if like.user.id != current_user.id %>
-                                <%= link_to("#{like.post_user}", "/home/#{like.id}/user_show")%>
-                            <% else %>
-                                <%= link_to("#{current_user.name}","/users/show") %>
-                            <% end %>
-                        </div>
-                        <div class="image-box">
-                            <h5><%= like.phrase %></h5>
-                            <img src='<%= like.book_image %>' class="img-fluid d-block">
-                        </div>
-                        <div class="content-box">
-                            <p class="title">『<%= like.title %>』</p>
-                            <p class="author">著者　<%= like.author %></p>
-                            <p>★ おすすめポイント</p>
-                            <p class="content">
-                                <%= like.content%>
-                                <% if user_signed_in? && current_user.id == like.post_user_id %>
-                                    <span class="edit-delete">
-                                        <%=link_to("編集" , "/home/#{like.id}/edit",class:"text-muted") %>
-                                        <%=link_to("削除" , "/home/#{like.id}/destroy",method: :post,class:"text-muted") %>
-                                    </span>
-                                <% end %>
-                            </p>
-                        </div>
-                        <div class="favorite-icon" id="like-btn-<%= like.id %>">
-                            <%= render 'likes/like', post: like %>
-                        </div>
+                    <div class="empty-box">
+                        <p>お気に入りの投稿を見つけよう</p>
                     </div>
                 </div>
+            <% else %>
+                <% @likes.each do |like| %>
+                    <div class="book-img col-lg-4 col-md-6 col-sm-12 center-block mx-auto">
+                        <div class="box">
+                            <div class="box-head">
+                                <div class="name">
+                                    <% if like.user.image? %>
+                                        <img src='<%= like.user.image %>' class="icon" alt="ユーザーアイコン">
+                                    <% else %>
+                                        <image src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
+                                    <% end %>
+                                    <% if like.user.id != current_user.id %>
+                                        <%= link_to("#{like.post_user}", "/home/#{like.id}/user_show")%>
+                                    <% else %>
+                                        <%= link_to("#{current_user.name}","/users/show") %>
+                                    <% end %>
+                                </div>
+                                <div class="edit-trash">
+                                    <% if user_signed_in? && current_user.id == like.post_user_id %>
+                                        <%=link_to("/home/#{like.id}/edit") do %>
+                                            <i class="fas fa-lg fa-pen-fancy"></i>
+                                        <% end %>
+                                        <%=link_to("/home/#{like.id}/destroy",method: :like) do %>
+                                            <i class="far fa-lg fa-trash-alt"></i>
+                                        <% end %>
+                                    <% end %>
+                                </div>
+                            </div>
+                            <div class="image-box">
+                                <h5><%= like.phrase %></h5>
+                                <img src='<%= like.book_image %>' class="img-fluid d-block">
+                            </div>
+                            <div class="content-box">
+                                <p class="title">『<%= like.title %>』</p>
+                                <p class="author">著者　<%= like.author %></p>
+                                <p class="content">
+                                    <%= like.content%>
+                                </p>
+                            </div>
+                            <div class="favorite-icon" id="like-btn-<%= like.id %>">
+                                <%= render 'likes/like', post: like %>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
             <% end %>
         </div>
     </div>

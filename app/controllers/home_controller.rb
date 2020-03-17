@@ -49,12 +49,6 @@ class HomeController < ApplicationController
     @post = Post.find_by(id: params[:id])
   end
 
-  # def set_liked
-  #   @like = Like.find_by(id: params[:id])
-  #   gon.like_user_id = @like.user_id
-  #   gon.current_user_id = current_user.id
-  # end
-
   def post_params
     params.permit(
       :title,
