@@ -5,11 +5,16 @@
 The words in a book are powerful enough to sometimes change your life.
 This app was created to create a new encounter with books by introducing and sharing a book of memories and one phrase together for me.
 
+本に書かれた言葉には、時に人生を大きく変えてしまうような、強い力があります。
+このアプリでは、自分にとっての思い出の本とその1フレーズを一緒に紹介・共有することで、本との新たな出逢いを生むために作りました。
+
 ## Demo
 https://s27.aconvert.com/convert/p3r68-cdx67/bzmmn-3m28y.gif
 
 ## Features
 Unlike traditional posting apps, the use of vertical CSS makes the design take advantage of the beauty of Japanese.
+
+従来の投稿アプリとは異なり、縦書きCSSを使用して形としての日本語の美しさを活かしました。
 
 ## Requirement
 - ruby 2.6.3
