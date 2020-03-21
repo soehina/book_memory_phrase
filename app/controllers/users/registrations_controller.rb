@@ -56,12 +56,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   def after_sign_in_path_for(resource)
-    home_index_path
+    posts_path
   end
 
   def after_update_up_path_for(resource)
     # user_path(id: current_user.id)
-    home_index_path(resource)
+    posts_path(resource)
   end
 
   def after_sign_out_path_for(resource)

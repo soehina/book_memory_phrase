@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <div class="row">
+        <div class="center-block mx-auto">
+                <%= form_tag(posts_path,{method: :post}) do %>
+                    <%= render 'shared/post_form' %>
+                <% end %>
+        </div>
+    </div>
+</div>

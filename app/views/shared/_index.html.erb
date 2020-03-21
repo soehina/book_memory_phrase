@@ -12,17 +12,17 @@
                                     <image src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
                                 <% end %>
                                 <% if post.user.id != current_user.id %>
-                                    <%= link_to("#{post.post_user}", "/home/#{post.id}/user_show")%>
+                                    <%= link_to("#{post.post_user}", post_path(post))%>
                                 <% else %>
                                     <%= link_to("#{current_user.name}","/users/show") %>
                                 <% end %>
                             </div>
                             <div class="edit-trash">
                             <% if user_signed_in? && current_user.id == post.post_user_id %>
-                                <%=link_to("/home/#{post.id}/edit") do %>
+                                <%=link_to(edit_post_path(post)) do %>
                                     <i class="fas fa-lg fa-pen-fancy"></i>
                                 <% end %>
-                                <%=link_to("/home/#{post.id}/destroy",method: :post) do %>
+                                <%=link_to(post_path(post),method: :delete) do %>
                                     <i class="far fa-lg fa-trash-alt"></i>
                                 <% end %>
                             <% end %>
