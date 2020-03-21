@@ -20,7 +20,7 @@
                                         <image src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
                                     <% end %>
                                     <% if like.user.id != current_user.id %>
-                                        <%= link_to("#{like.post_user}", "/home/#{like.id}/user_show")%>
+                                        <%= link_to("#{like.post_user}", "/home/#{like.id}/show")%>
                                     <% else %>
                                         <%= link_to("#{current_user.name}","/users/show") %>
                                     <% end %>

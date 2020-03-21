@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
-  before_action :set_post, only: [:user_show, :add_score, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:user_show, :create, :new, :edit, :destroy]
+  before_action :set_post, only: [:show, :add_score, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:show, :create, :new, :edit, :destroy]
 
   def top
   end
@@ -9,9 +9,10 @@ class HomeController < ApplicationController
     @posts = Post.all.order(id: "DESC")
   end
 
-  def user_show
+  def show
     @user = @post.user
     @posts = @user.posts.order(id: "DESC")
+    @likes = @user.like_posts.includes(:user).order(updated_at: "DESC")
   end
 
   def new

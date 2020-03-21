@@ -1,0 +1,17 @@
+<div class="user_show_name">
+    <div class="user-img show-icon">
+        <% if @post.user.image? %>
+            <img src='<%= @post.user.image %>' class="icon" alt="ユーザーアイコン">
+        <% else %>
+            <image src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
+        <% end %>
+    </div>
+    <%= @post.post_user %>さんの投稿
+</div>
+
+<div id="wrap">
+    <div class="container-fluid">
+        <%= render 'shared/index' %>
+        <%= render 'shared/likespost' %>
+    </div>
+</div>

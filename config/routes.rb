@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'home/index' => 'home#index'
-  get 'home/:id/user_show' => 'home#user_show'
+  get 'home/:id/show' => 'home#show'
   get 'home/new' => 'home#new'
   post 'home/create' => 'home#create'
   get 'home/:id/edit' => 'home#edit'

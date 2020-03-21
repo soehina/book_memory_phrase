@@ -12,7 +12,7 @@
                                     <image src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
                                 <% end %>
                                 <% if post.user.id != current_user.id %>
-                                    <%= link_to("#{post.post_user}", "/home/#{post.id}/user_show")%>
+                                    <%= link_to("#{post.post_user}", "/home/#{post.id}/show")%>
                                 <% else %>
                                     <%= link_to("#{current_user.name}","/users/show") %>
                                 <% end %>
