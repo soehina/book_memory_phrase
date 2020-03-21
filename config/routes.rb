@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'home/index' => 'home#index'
-  get 'home/:id/show' => 'home#show'
-  get 'home/new' => 'home#new'
-  post 'home/create' => 'home#create'
-  get 'home/:id/edit' => 'home#edit'
-  post 'home/:id/update' => 'home#update'
-  post 'home/:id/destroy' => 'home#destroy'
-
   resources :posts do
     post 'add' => 'likes#create'
     delete '/add' => 'likes#destroy'
@@ -23,7 +15,7 @@ Rails.application.routes.draw do
   }
 
   as :user do
-    get 'home/index',:to => 'devise/registrations#edit',:as => :user_root
+    get '/posts',:to => 'devise/registrations#edit',:as => :user_root
   end
 
   root to: 'home#top'

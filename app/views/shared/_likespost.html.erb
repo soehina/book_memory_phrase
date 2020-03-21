@@ -20,17 +20,17 @@
                                         <image src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
                                     <% end %>
                                     <% if like.user.id != current_user.id %>
-                                        <%= link_to("#{like.post_user}", "/home/#{like.id}/show")%>
+                                        <%= link_to("#{like.post_user}", post_path(like))%>
                                     <% else %>
                                         <%= link_to("#{current_user.name}","/users/show") %>
                                     <% end %>
                                 </div>
                                 <div class="edit-trash">
                                     <% if user_signed_in? && current_user.id == like.post_user_id %>
-                                        <%=link_to("/home/#{like.id}/edit") do %>
+                                        <%=link_to(edit_post_path(like)) do %>
                                             <i class="fas fa-lg fa-pen-fancy"></i>
                                         <% end %>
-                                        <%=link_to("/home/#{like.id}/destroy",method: :like) do %>
+                                        <%=link_to(post_path(like),method: :delete) do %>
                                             <i class="far fa-lg fa-trash-alt"></i>
                                         <% end %>
                                     <% end %>
