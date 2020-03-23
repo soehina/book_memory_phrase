@@ -78,11 +78,6 @@ i{
     color: $linkcolor;
 }
 
-.box a,
-.box span{
-    font-weight: bold;
-}
-
 p{
     text-indent: 1em;
 }
@@ -343,6 +338,15 @@ p{
     投稿
 ========================================= */
 
+// .row{
+//     transition: all 0.8s;
+//     opacity: 0;
+//     &.book-img{
+//         opacity: 1;
+//         transform: none;
+//     }
+// }
+
 .box,
 .empty-box{
     writing-mode: vertical-rl;
@@ -357,6 +361,10 @@ p{
 .box{
     background-color: $c-white;
     margin: 25px 0;
+    & a,
+    & span{
+        font-weight: bold;
+    }
 }
 
 .empty-box{
