@@ -4,8 +4,7 @@
 The words in a book are powerful enough to sometimes change your life.
 This app was created to create a new encounter with books by introducing and sharing a book of memories and one phrase together for me.
 
-本に書かれた言葉には、時に人生を大きく変えてしまうような、強い力があります。
-このアプリでは、自分にとっての思い出の本とその1フレーズを一緒に紹介・共有することで、本との新たな出逢いを生むために作りました。
+本に書かれた言葉には、時に人生を大きく変えてしまうような、強い力があります。 このアプリは、自分にとっての思い出の本とその1フレーズを一緒に紹介・共有することで、本との新たな出逢いを生むために作られました。
 
 ## Demo
 https://mevie.it/f8i3fhjsylsv1myff3fjmjzxd5s4oydjjq65e3z6/?pw=
