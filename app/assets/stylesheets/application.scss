@@ -14,9 +14,8 @@
  *= require_self
  */
 
-
 /* ========================================
-    まとめて指定
+    色指定
 ========================================= */
 $textcolor: #7b777c;
 $linkcolor: #3e3a3f;
@@ -26,6 +25,90 @@ $button-hover-color: rgba(31, 173, 255, 0.5);
 $like-icon: #a9dee6;
 $liked-icon: #ff949c;
 
+/* ========================================
+    ローディング画面
+========================================= */
+ @import "mixin";
+
+#back{
+    width: 100vw;
+    height: 100vh;
+    background-color: $c-white;
+    display: flex;
+    & div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        & p{
+            color: $like-icon;
+            & span{
+                transform-origin: left;
+                @include animation(
+                    $name: dot-anime
+                );
+            }
+        }
+    }
+}
+
+#load-box{
+    width: 100px;
+    height: 135px;
+    border: 1px solid $like-icon;
+    & div{
+        width: 60px;
+        border: 1px solid $like-icon;
+        margin: 5px auto;
+        transform-origin: left;
+        animation-timing-function: cubic-bezier(1, 0.03, 0.98, 0.04);
+        @include animation(
+            $name: load-anime
+        );
+        @for $i from 1 through 7 {
+            &:nth-child(#{$i}){
+                animation-delay: -1.3s + $i * 0.1s;
+            }
+        }
+    }
+}
+
+@keyframes load-anime{
+    0%{
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    50%{
+        opacity: 1;
+        transform: scaleX(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scaleX(0);
+    }
+}
+
+@keyframes dot-anime{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+
+/* ========================================
+    まとめて指定
+========================================= */
 
 body{
     font-weight: 100;

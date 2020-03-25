@@ -16,10 +16,9 @@
 //= require jquery
 //= require rails-ujs
 
-// document.addEventListener('turbolinks:load',function(){
-//     var btns = document.querySelectorAll('.icon-btn');
-//     for(var i = 0; i < btns.length; i++){
-//         btns[i].addEventListener('click',function(){
-//         },false);
-//     }
-// },false);
+const showloading = document.querySelector('#back');
+const contents = document.querySelector('#contents');
+window.addEventListener('load',function(){
+    showloading.style.display = 'none';
+    contents.classList.remove('hidden');
+});

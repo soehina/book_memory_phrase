@@ -1,0 +1,13 @@
+@mixin animation(
+    $name,
+    $duration: 3s,
+    $interation-count: infinite,
+    $fill-mode: forwards
+){
+    animation: {
+        name: $name;
+        duration: $duration;
+        iteration-count: $interation-count;
+        animation-fill-mode: $fill-mode;
+    }
+}
