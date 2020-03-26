@@ -82,3 +82,5 @@ gem 'nokogiri'
 
 # jsファイルで変数を使う
 gem 'gon'
+
+gem 'jquery-turbolinks'

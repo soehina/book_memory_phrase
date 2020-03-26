@@ -11,14 +11,13 @@
 // about supported directives.
 //
 //= require activestorage
-//= require turbolinks
 //= require_tree .
 //= require jquery
+//= require jquery.turbolinks
 //= require rails-ujs
 
-const showloading = document.querySelector('#back');
-const contents = document.querySelector('#contents');
-window.addEventListener('load',function(){
-    showloading.style.display = 'none';
-    contents.classList.remove('hidden');
-});
+function loaded(){
+    const loading = document.querySelector('#back');
+    loading.classList.add('loaded');
+}
+window.onload = loaded;

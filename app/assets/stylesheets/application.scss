@@ -35,6 +35,10 @@ $liked-icon: #ff949c;
     height: 100vh;
     background-color: $c-white;
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
     & div{
         display: flex;
         justify-content: center;
@@ -44,7 +48,6 @@ $liked-icon: #ff949c;
         & p{
             color: $like-icon;
             & span{
-                transform-origin: left;
                 @include animation(
                     $name: dot-anime
                 );
@@ -101,8 +104,9 @@ $liked-icon: #ff949c;
     }
 }
 
-.hidden{
-    display: none;
+.loaded{
+    opacity: 0;
+    visibility: hidden;
 }
 
 
