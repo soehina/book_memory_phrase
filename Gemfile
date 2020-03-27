@@ -84,3 +84,5 @@ gem 'nokogiri'
 gem 'gon'
 
 gem 'jquery-turbolinks'
+
+gem 'seed_dump'
