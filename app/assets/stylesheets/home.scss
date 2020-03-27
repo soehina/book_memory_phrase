@@ -1,3 +1,29 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$textcolor: #7b777c;
+$linkcolor: #3e3a3f;
+$c-white: #ffffff;
+$button-color: rgba(75, 168, 255, 0.3);
+$button-hover-color: rgba(31, 173, 255, 0.5);
+$like-icon: #a9dee6;
+$liked-icon: #ff949c;
+
+#disc{
+    color: $c-white;
+    text-align: center;
+    padding: 90px;
+    border-radius: 50px;
+    & h3{
+        margin-bottom: 30px;
+    }
+}
+
+.jumbotron{
+    background: url("/images/kidread.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}

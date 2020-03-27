@@ -116,10 +116,9 @@ $liked-icon: #ff949c;
 
 body{
     font-weight: 100;
-    font-family:serif !important;
+    font-family:"Noto Serif JP" !important;
     font-size: medium;
-    animation: fadeIn 2s ease 0s 1 normal;
-    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+    color: $textcolor;
 }
 
 h2{
@@ -147,7 +146,6 @@ header p,
 input,
 textarea{
     color: $textcolor;
-    font-family: "Noto Serif JP";
 }
 
 i{
@@ -171,7 +169,7 @@ p{
 
 #overwrap{
     background-image: url("/images/cover.png");
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
