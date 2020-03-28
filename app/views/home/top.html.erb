@@ -2,27 +2,27 @@
 <div class="jumbotron">
     <div class="container-fluid">
         <div id="disc">
-            <h3>ほんとの出逢い。</h3>
-            <div>すべての出逢いは言葉から始まります。それは本との出逢いも同じ。</div>
-            <div>book memory phrase は、心に残った1フレーズを書籍から引用して共有することで、言葉から本との新たな出逢いを作る場です。</div>
+            <h1>book memory phrase</h1>
+            <h4>ほんとの出逢い</h4>
+            <div>すべての出逢いは言葉から始まります。</div>
+            <div>それは、本との出逢いも同じ。</div>
+            <div>book memory phrase は、心に残った1フレーズを書籍から引用して共有することで、</div>
+            <div>「ほんとの出逢い」を作る場です。</div>
         </div>
     </div>
 </div>
-    <div class="row">
-        <div class="book-img col-md-6 col-sm-12 center-block mx-auto">
-            <div class="empty-box">
-                <p>思い出のワンフレーズと一緒に投稿</p>
-            </div>
+    <div class="subtitle">New posts</div>
+    <div class="row top-post-box">
+        <%= render 'shared/top' %>
+    </div>
+    <% if user_signed_in? %>
+        <div id="sigh-login">
+            <%= link_to('もっと見る',posts_path) %>
         </div>
-        <div>新着投稿</div>
-        <%= render 'shared/index' %>
-    </div>
+    <% else %>
+        <div id="sigh-login">
+            <%= link_to('もっと見る',users_sign_in_path) %>
+        </div>
+    <% end %>
 </div>
 </div>
-<fotter>
-    <div>
-        <a href="#"><i class="fab fa-quora fa-lg"></i></a>
-        <a href="#"><i class="fab fa-github fa-lg"></i></a>
-        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
-    </div>
-</fotter>

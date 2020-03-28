@@ -1,0 +1,46 @@
+<div id="wrap">
+    <div class="container-fluid">
+        <div class="row">
+            <% @posts.each do |post| %>
+                <div class="book-img col-lg-4 col-md-6 col-sm-12 center-block mx-auto">
+                    <div class="box">
+                        <div class="box-head">
+                            <div class="name">
+                                <% if post.user.image? %>
+                                    <img src='<%= post.user.image %>' class="icon" alt="ユーザーアイコン">
+                                <% else %>
+                                    <image src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
+                                <% end %>
+                                <%= link_to("#{post.post_user}", post_path(post))%>
+                            </div>
+                            <div class="edit-trash">
+                            <% if user_signed_in? && current_user.id == post.post_user_id %>
+                                <%=link_to(edit_post_path(post)) do %>
+                                    <i class="fas fa-lg fa-pen-fancy"></i>
+                                <% end %>
+                                <%=link_to(post_path(post),method: :delete) do %>
+                                    <i class="far fa-lg fa-trash-alt"></i>
+                                <% end %>
+                            <% end %>
+                            </div>
+                        </div>
+                        <div class="image-box">
+                            <h5><%= post.phrase %></h5>
+                            <img src='<%= post.book_image %>' class="img-fluid d-block">
+                        </div>
+                        <div class="content-box">
+                            <p class="title">『<%= post.title %>』</p>
+                            <p class="author">著者　<%= post.author %></p>
+                            <p class="content">
+                                <%= post.content%>
+                            </p>
+                        </div>
+                        <div class="favorite-icon">
+                            <i class="fa-lg fas fa-heart icon-btn not-like"></i>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

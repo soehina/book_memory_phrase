@@ -19,5 +19,5 @@
 function loaded(){
     const loading = document.querySelector('#back');
     loading.classList.add('loaded');
-}
+};
 window.onload = loaded;

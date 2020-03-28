@@ -5,18 +5,20 @@
 $textcolor: #7b777c;
 $linkcolor: #3e3a3f;
 $c-white: #ffffff;
-$button-color: rgba(75, 168, 255, 0.3);
-$button-hover-color: rgba(31, 173, 255, 0.5);
 $like-icon: #a9dee6;
 $liked-icon: #ff949c;
+$shadow: rgba(110, 147, 168, 0.5);
 
 #disc{
     color: $c-white;
     text-align: center;
     padding: 90px;
     border-radius: 50px;
-    & h3{
+    & h1{
         margin-bottom: 30px;
+    }
+    & h4{
+        margin-bottom: 15px;
     }
 }
 
@@ -26,4 +28,32 @@ $liked-icon: #ff949c;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+.top-post-box{
+    margin-bottom: 30px;
+}
+
+#sigh-login{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto 30px auto;
+    & a{
+        background-color: $c-white;
+        text-align: center;
+        padding: 20px 40px;
+        border: none;
+        color: $textcolor;
+        transition: all 0.3s;
+        margin: 20px 0;
+        border-radius: 50px;
+        box-shadow: 10px 10px 6px $shadow;
+        &:hover{
+            color: $linkcolor;
+            transition: all 0.3s;
+            text-decoration: none;
+            box-shadow: 5px 5px 6px $shadow;
+        }
+    }
 }

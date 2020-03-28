@@ -20,10 +20,9 @@
 $textcolor: #7b777c;
 $linkcolor: #3e3a3f;
 $c-white: #ffffff;
-$button-color: rgba(75, 168, 255, 0.3);
-$button-hover-color: rgba(31, 173, 255, 0.5);
 $like-icon: #a9dee6;
 $liked-icon: #ff949c;
+$shadow: rgba(110, 147, 168, 0.5);
 
 /* ========================================
     ローディング画面
@@ -180,7 +179,7 @@ p{
     widows: 100%;
     height: auto;
     text-align: -webkit-center;
-    margin-top: 50px;
+    margin: 50px auto;
 }
 
 .alert{
@@ -190,15 +189,21 @@ p{
 .input-submit,
 .submit-btn,
 .actions input{
-    background-color: $button-color;
+    background-color: $c-white;
     text-align: center;
-    padding: 10px 40px;
+    padding: 20px 40px;
     border: none;
-    color: $linkcolor;
+    color: $textcolor;
+    transition: all 0.3s;
+    margin: 20px 0;
+    border-radius: 50px;
+    box-shadow: 10px 10px 6px $shadow;
+    border: 1px solid $textcolor;
     &:hover{
-        background-color: $button-hover-color;
-        color: $c-white;
+        color: $linkcolor;
         transition: all 0.3s;
+        text-decoration: none;
+        box-shadow: 5px 5px 6px $shadow;
     }
 }
 
@@ -213,6 +218,20 @@ p{
     & textarea{
         margin-bottom: 30px;
     }
+}
+
+.subtitle{
+    text-align: left;
+    margin: 50px 0 -30px 0;
+    color: $textcolor;
+    height: 62px;
+    padding: 10px;
+    width: 40%;
+    font-size: x-large;
+    background-color: $c-white;
+    border-left: none;
+    background-color: $c-white;
+    border-right: 5px solid $textcolor;
 }
 
 /* ========================================
@@ -240,84 +259,86 @@ p{
     box-sizing: border-box;
     }
     ol, ul {
-    list-style: none;
+        list-style: none;
     }
     a {
-    text-decoration: none;
-    color: inherit;
+        text-decoration: none;
+        color: inherit;
     }
     /* menu */
     .cp_offcm03 {
-    left: 0;
-    overflow: auto;
-    width: 100%;
-    height: auto;
-    padding-top: 0;
-    -webkit-transition: transform 0.3s ease-in;
-    transition: transform 0.3s ease-in;
-    text-align: center;
-    background-color: transparent;
+        left: 0;
+        overflow: auto;
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+        -webkit-transition: transform 0.3s ease-in;
+        transition: transform 0.3s ease-in;
+        text-align: center;
+        background-color: transparent;
     }
     .cp_offcm03 nav,
     .cp_offcm03 ul {
-    height: 100%;
+        height: 100%;
     }
 
     .cp_offcm03{
         margin: 0;
         opacity: 0;
-
+        transition: all 0.3s;
         &:hover{
             opacity: 1;
+            transform: translate(0,30px);
+            transition: all 0.3s;
         }
     }
 
     .cp_offcm03{
         & li {
-            display: inline-block;
-            margin-right: -6px;
-            border: none;
+                display: inline-block;
+                margin-right: -6px;
+                border: none;
         }
         & a{
             display: block;
             padding: 12px 45px;
             -webkit-transition: background-color .3s ease-in;
             transition: background-color .3s ease-in;
-        }
-        & a:hover {
-            text-decoration: none;
-        }
-        & a i{
-            font-size: larger;
+            &:hover {
+                text-decoration: none;
+            }
+            & i{
+                font-size: larger;
+            }
         }
     }
     /* menu toggle */
     #cp_toggle03 {
-    display: none;
+        display: none;
     }
     #cp_toggle03:checked ~ .cp_offcm03 {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
     #cp_toggle03:checked ~ .cp_container {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
     .cp_mobilebar {
-    display: none;
+        display: none;
     }
     /* content */
     .cp_container {
-    position: relative;
-    top: 0;
-    padding: 35px auto;
-    -webkit-transition: transform .3s ease-in;
-    transition: transform .3s ease-in;
+        position: relative;
+        top: 0;
+        padding: 35px auto;
+        -webkit-transition: transform .3s ease-in;
+        transition: transform .3s ease-in;
     }
     .cp_content {
-    margin: 0 auto;
-    padding: 20px;
-    height: 65vh;
+        margin: 0 auto;
+        padding: 20px;
+        height: 65vh;
     }
     @media (max-width: 767px) {
     /* menu */
@@ -330,107 +351,98 @@ p{
         padding-top: 30px;
         background-color: transparent;
         opacity: 1;
-            & nav {
-                background: transparent;
-                width: min-content;
-            }
-            & li {
-                display: block;
-                margin-right: 0;
-            }
-            & a {
-                padding: 20px 17px;
-                color: $linkcolor;
-            }
+        & nav {
+            background: transparent;
+            width: min-content;
+        }
+        & li {
+            display: block;
+            margin-right: 0;
+        }
+        & a {
+            padding: 20px 17px;
+            color: $linkcolor;
+        }
     }
     /* menu toggle */
     .cp_mobilebar {
-    display: block;
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0 15px;
-    width: 100%;
-    height: 60px;
-    background-color: transparent;
+        display: block;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0 15px;
+        width: 100%;
+        height: 60px;
+        background-color: transparent;
     }
     .cp_menuicon {
-    display: block;
-    position: relative;
-    width: 25px;
-    height: 100%;
-    cursor: pointer;
-    -webkit-transition: transform .3s ease-in;
-    transition: transform .3s ease-in;
+        display: block;
+        position: relative;
+        width: 25px;
+        height: 100%;
+        cursor: pointer;
+        -webkit-transition: transform .3s ease-in;
+        transition: transform .3s ease-in;
     }
     .cp_menuicon > span {
-    display: block;
-    position: absolute;
-    top: 55%;
-    margin-top: -0.3em;
-    width: 100%;
-    height: 0.2em;
-    border-radius: 1px;
-    background-color: $linkcolor;
-    -webkit-transition: transform .3s ease;
-    transition: transform .3s ease;
+        display: block;
+        position: absolute;
+        top: 55%;
+        margin-top: -0.3em;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1px;
+        background-color: $linkcolor;
+        -webkit-transition: transform .3s ease;
+        transition: transform .3s ease;
     }
     .cp_menuicon > span:before,
     .cp_menuicon > span:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 1px;
-    background-color: $linkcolor;
-    -webkit-transition: transform .3s ease-in;
-    transition: transform .3s ease-in;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 1px;
+        background-color: $linkcolor;
+        -webkit-transition: transform .3s ease-in;
+        transition: transform .3s ease-in;
     }
     .cp_menuicon > span:before {
-    -webkit-transform: translateY(-0.6em);
-    transform: translateY(-0.6em);
+        -webkit-transform: translateY(-0.6em);
+        transform: translateY(-0.6em);
     }
     .cp_menuicon > span:after {
-    -webkit-transform: translateY(0.6em);
-    transform: translateY(0.6em);
+        -webkit-transform: translateY(0.6em);
+        transform: translateY(0.6em);
     }
     #cp_toggle03:checked + .cp_mobilebar .cp_menuicon {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
     }
     #cp_toggle03:checked + .cp_mobilebar span:before,
     #cp_toggle03:checked + .cp_mobilebar span:after {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
     }
     #cp_toggle03:checked ~ .cp_offcm03 {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
     }
     #cp_toggle03:checked ~ .cp_container {
-    -webkit-transform: translateX(250px);
-    transform: translateX(250px);
+        -webkit-transform: translateX(250px);
+        transform: translateX(250px);
     }
     /* content */
     .cp_container {
-    top: 60px;
-    height: 92vh;
+        top: 60px;
+        height: 92vh;
     }
-    }
+}
 
 /* ========================================
     投稿
 ========================================= */
-
-// .row{
-//     transition: all 0.8s;
-//     opacity: 0;
-//     &.book-img{
-//         opacity: 1;
-//         transform: none;
-//     }
-// }
 
 .box,
 .empty-box{
@@ -446,6 +458,14 @@ p{
 .box{
     background-color: $c-white;
     margin: 25px 0;
+    box-shadow: 15px 20px 6px $shadow;
+    transition: all 0.3s;
+    transform: translate(0);
+    &:hover{
+        box-shadow: 30px 35px 6px $shadow;
+        transition: all 0.3s;
+        transform: translate(-10px,-10px);
+    }
     & a,
     & span{
         font-weight: bold;
@@ -576,6 +596,33 @@ img{
 
 nav.pagination {
     display: none;
+}
+
+/* ========================================
+    フッター
+========================================= */
+
+footer{
+    background-color: $c-white;
+    padding: 10px;
+    color: $textcolor;
+    & div{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        & a{
+            margin: 0 20px;
+            border: 1px solid $textcolor;
+            padding: 10px 12px;
+            border-radius: 50px;
+            box-shadow: 4px 4px 3px $shadow;
+            &:hover{
+                transition: all 0.3s;
+                color: $linkcolor;
+                box-shadow: 2px 2px 3px $shadow;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:767px) {
