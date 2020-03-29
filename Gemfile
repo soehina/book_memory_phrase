@@ -82,7 +82,11 @@ gem 'nokogiri'
 
 # jsファイルで変数を使う
 gem 'gon'
-
 gem 'jquery-turbolinks'
-
 gem 'seed_dump'
+
+#api関連
+gem 'json'
+gem 'httparty'
+
+gem 'kaminari'

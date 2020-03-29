@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
     before_action :set_post, only: [:show, :add_score, :edit, :update, :destroy]
     before_action :authenticate_user!, only: [:show, :create, :new, :edit, :destroy]
+    # includes Books
 
     def index
         @posts = Post.all.order(id: "DESC")
@@ -14,6 +15,8 @@ class PostsController < ApplicationController
 
     def new
         @post=Post.new
+        # @results = @@results
+        # book = Books.url_from_keyword
     end
 
     def create

@@ -17,7 +17,11 @@
 //= require rails-ujs
 
 function loaded(){
-    const loading = document.querySelector('#back');
+    var loading = document.querySelector('#back');
     loading.classList.add('loaded');
 };
 window.onload = loaded;
+
+function setbook(){
+    
+}

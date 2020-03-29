@@ -138,7 +138,7 @@ nav ul li a{
 
 .title-top a,
 header p,
-#wrap,
+.wrap,
 .user_show_name,
 .form-box,
 .box a,
@@ -175,7 +175,7 @@ p{
     border: 30px solid $c-white;
 }
 
-#wrap{
+.wrap{
     widows: 100%;
     height: auto;
     text-align: -webkit-center;
@@ -226,7 +226,7 @@ p{
     color: $textcolor;
     height: 62px;
     padding: 10px;
-    width: 40%;
+    width: 45%;
     font-size: x-large;
     background-color: $c-white;
     border-left: none;
@@ -455,7 +455,8 @@ p{
     width: 380px;
 }
 
-.box{
+.box,
+.result-box{
     background-color: $c-white;
     margin: 25px 0;
     box-shadow: 15px 20px 6px $shadow;
@@ -468,6 +469,24 @@ p{
     }
     & a,
     & span{
+        font-weight: bold;
+    }
+}
+
+.result-box{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 380px;
+    height: 500px;
+    margin: 30px auto;
+    color: $textcolor;
+    & img{
+        width: 265px;
+        margin-bottom: 14px;
+    }
+    & h3{
+        font-size: 20px;
         font-weight: bold;
     }
 }

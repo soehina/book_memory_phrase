@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+
   resources :posts do
     post 'add' => 'likes#create'
     delete '/add' => 'likes#destroy'
   end
+
+  get '/books/results_index' => 'books#results_index'
+  post '/books/result' => 'books#url_from_keyword'
 
   get 'users/show'
 
