@@ -6,8 +6,8 @@ This app was created to create a new encounter with books by introducing and sha
 
 本に書かれた言葉には、時に人生を大きく変えてしまうような、強い力があります。 このアプリは、自分にとっての思い出の本とその1フレーズを一緒に紹介・共有することで、本との新たな出逢いを生むために作られました。
 
-## Demo
-https://mevie.it/f8i3fhjsylsv1myff3fjmjzxd5s4oydjjq65e3z6/?pw=
+## Demo(Video)
+https://mevie.it/3yuuwvz9ovjzxa8og6kswa25ywgj6io3j6g10tyd/?pw=
 
 ## Features
 Unlike traditional posting apps, the use of vertical CSS makes the design take advantage of the beauty of Japanese.
@@ -38,6 +38,8 @@ Unlike traditional posting apps, the use of vertical CSS makes the design take a
 - Change user information
 - Like Post Ranking (to be implemented)
 - New registration / deletion of user
+
+※ 現在API検索・表示まで実装完了。フォームに値の設定は未完。
 
 ## Another
 - Illustration of background design (own work)
