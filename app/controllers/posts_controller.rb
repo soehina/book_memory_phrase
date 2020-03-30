@@ -1,8 +1,11 @@
+require 'net/http'
+require 'uri'
+require 'json'
+require 'httparty'
 class PostsController < ApplicationController
     before_action :set_post, only: [:show, :add_score, :edit, :update, :destroy]
     before_action :authenticate_user!, only: [:show, :create, :new, :edit, :destroy]
-    # includes Books
-
+    @@results = nil
     def index
         @posts = Post.all.order(id: "DESC")
     end
@@ -14,9 +17,12 @@ class PostsController < ApplicationController
     end
 
     def new
-        @post=Post.new
-        # @results = @@results
-        # book = Books.url_from_keyword
+        if @@results.nil?
+            @post = Post.new
+        else
+            @post = Post.new
+            @results = @@results
+        end
     end
 
     def create
@@ -26,6 +32,13 @@ class PostsController < ApplicationController
         else
             render action: :new
         end
+    end
+
+    def url_from_keyword
+        keyword = params[:keyword]
+        results = BooksApi.get_url(keyword)
+        @@results = results.parsed_response
+        redirect_to(new_post_path)
     end
 
     def edit
