@@ -5,7 +5,9 @@ require 'httparty'
 class PostsController < ApplicationController
     before_action :set_post, only: [:show, :add_score, :edit, :update, :destroy]
     before_action :authenticate_user!, only: [:show, :create, :new, :edit, :destroy]
-    @@results = nil
+    @@results = []
+    require 'nil_class'
+
     def index
         @posts = Post.all.order(id: "DESC")
     end
@@ -17,11 +19,11 @@ class PostsController < ApplicationController
     end
 
     def new
-        if @@results.nil?
+        if @results.present?
             @post = Post.new
         else
             @post = Post.new
-            @results = @@results
+            @results = url_from_keyword
         end
     end
 
@@ -32,13 +34,6 @@ class PostsController < ApplicationController
         else
             render action: :new
         end
-    end
-
-    def url_from_keyword
-        keyword = params[:keyword]
-        results = BooksApi.get_url(keyword)
-        @@results = results.parsed_response
-        redirect_to(new_post_path)
     end
 
     def edit
@@ -55,6 +50,11 @@ class PostsController < ApplicationController
     def destroy
         @post.destroy
         redirect_to(posts_path)
+    end
+
+    def url_from_keyword
+        keyword = params[:keyword]
+        BooksApi.get_url(keyword)
     end
 
     private

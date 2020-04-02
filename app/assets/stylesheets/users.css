@@ -1,0 +1,26 @@
+.form-input input {
+  margin: 10px 0 30px 0;
+  width: 70%;
+}
+
+.form-input span {
+  font-size: small;
+}
+
+.btn-block {
+  margin: 10px;
+}
+
+.btn-box {
+  margin: 20px 0;
+}
+
+.login {
+  width: -webkit-fill-available;
+  margin: 20px;
+}
+
+#user_remember_me {
+  width: 25px;
+}
+/*# sourceMappingURL=users.css.map */

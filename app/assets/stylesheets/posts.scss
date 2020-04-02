@@ -11,6 +11,9 @@ $shadow: rgba(110, 147, 168, 0.5);
 
 #search-box{
     margin-top: 30px;
+    & form{
+        text-align: center;
+    }
     & button{
         background: none;
         border: none;
@@ -23,6 +26,10 @@ $shadow: rgba(110, 147, 168, 0.5);
     border-radius: 50px;
     border: 1px solid $textcolor;
     padding: 10px;
+}
+
+#ajax-response{
+    margin: auto;
 }
 
 @media screen and (max-width:767px) {

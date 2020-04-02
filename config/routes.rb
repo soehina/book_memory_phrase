@@ -5,8 +5,6 @@ Rails.application.routes.draw do
     delete '/add' => 'likes#destroy'
   end
 
-  post '/posts/result' => 'posts#url_from_keyword'
-
   get 'users/show'
 
   devise_scope :user do

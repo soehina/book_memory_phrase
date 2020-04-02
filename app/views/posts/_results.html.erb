@@ -1,0 +1,26 @@
+<div class="wrap" id="ajax-response">
+    <div class="container-fluid">
+        <div class="row">
+            <% for i in 0..29 do %>
+                <div class="result-box">
+                    <% if @results["items"][i]["volumeInfo"]["imageLinks"].nil? %>
+                        <img src="/images/noimage.png">
+                    <% else %>
+                        <img src="<%= @results["items"][i]["volumeInfo"]["imageLinks"]["thumbnail"] %>" >
+                    <% end %>
+                    <% if @results["items"][i]["volumeInfo"]["title"].nil? %>
+                        <h3 class="title">情報がありません</h3>
+                    <% else %>
+                        <h3 class="title"><%= @results["items"][i]["volumeInfo"]["title"] %></h3>
+                    <% end %>
+                    <% if @results["items"][i]["volumeInfo"]["authors"].nil?  %>
+                        <p class="niltext">情報がありません</p>
+                    <% else %>
+                        <p class="niltext"><%= @results["items"][i]["volumeInfo"]["authors"][0] %></p>
+                    <% end %>
+                    <button onclick="setbook(this)">選択</button>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

@@ -23,6 +23,8 @@ $c-white: #ffffff;
 $like-icon: #a9dee6;
 $liked-icon: #ff949c;
 $shadow: rgba(110, 147, 168, 0.5);
+$titlecolor: #adb5b9;
+$listcolor: #fffa96;
 
 /* ========================================
     ローディング画面
@@ -223,7 +225,7 @@ p{
 .subtitle{
     text-align: left;
     margin: 50px 0 -30px 0;
-    color: $textcolor;
+    color: $titlecolor;
     height: 62px;
     padding: 10px;
     width: 45%;
@@ -231,7 +233,7 @@ p{
     background-color: $c-white;
     border-left: none;
     background-color: $c-white;
-    border-right: 5px solid $textcolor;
+    border-right: 5px solid $listcolor;
 }
 
 /* ========================================
@@ -475,7 +477,7 @@ p{
 
 .result-box{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     width: 380px;
     height: 500px;
@@ -483,11 +485,26 @@ p{
     color: $textcolor;
     & img{
         width: 265px;
-        margin-bottom: 14px;
+        margin: 15px auto;
     }
     & h3{
         font-size: 20px;
         font-weight: bold;
+    }
+    & button{
+        margin-bottom: 10px;
+        border: 1px solid $textcolor;
+        border-radius: 50px;
+        padding: 5px;
+        width: 60px;
+        height: 34px;
+        color: $textcolor;
+        box-shadow: 4px 4px 3px $shadow;
+        &:hover{
+            transition: all 0.3s;
+            color: $linkcolor;
+            box-shadow: 2px 2px 3px $shadow;
+        }
     }
 }
 
@@ -546,7 +563,7 @@ p{
     }
 }
 
-.author,
+.niltext,
 .edit-delete{
     text-align: end;
 }

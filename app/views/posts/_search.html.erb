@@ -1,0 +1,4 @@
+<%= form_tag(new_post_path, method: :get, remote: true) do %>
+    <input type="text" name="keyword" id="keyword" placeholder="書籍を検索">
+    <button type="submit"><i class="fas fa-search fa-lg"></i></button>
+<% end %>
