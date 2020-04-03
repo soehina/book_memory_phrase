@@ -17,7 +17,7 @@ Unlike traditional posting apps, the use of vertical CSS makes the design take a
 ## Requirement
 - ruby 2.6.3
 - rails 5.2.2
-- JavaScript (planned)
+- JavaScript
 - Jquery / Ajax (like function display)
 - redis 4.0(session management)
 - Docker
@@ -31,15 +31,12 @@ Unlike traditional posting apps, the use of vertical CSS makes the design take a
 - Post List
 - Like / Delete Like
 - Book submission
-- Book search from API → Post (to be implemented)
+- Book search from API → Post
 - Edit / Delete posts
 - List of user posts
 - My posts / like list
 - Change user information
-- Like Post Ranking (to be implemented)
 - New registration / deletion of user
-
-※ 現在API検索・表示まで実装完了。フォームに値の設定は未完。
 
 ## Another
 - Illustration of background design (own work)

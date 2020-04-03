@@ -14,7 +14,7 @@ Rails.application.configure do
 
   config.web_console.whitelisted_ips = '0.0.0.0/0'
 
-  # config.session_store :redis_store, servers: 'redis://redis:6379/0', expire_in: 1.day
+  config.session_store :redis_store, servers: 'redis://redis:6379/0', expire_in: 1.day
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
