@@ -1,5 +1,8 @@
 FROM ruby:2.6.3
 
+ARG pip_installer="https://bootstrap.pypa.io/get-pip.py"
+ARG awscli_version="1.16.236"
+
 RUN apt-get update -qq && \
     apt-get install -y build-essential \
                        		libpq-dev \
