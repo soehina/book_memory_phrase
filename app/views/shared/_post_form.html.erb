@@ -1,9 +1,9 @@
 <div class="form-box">
     <div>タイトル</div>
-    <input type="text" name="title" maxlength="15" value="<%= @post.title %>" class="form-control" placeholder="15字まで入力できます。">
+    <input type="text" id="title" name="title" maxlength="15" value="<%= @post.title %>" class="form-control" placeholder="15字まで入力できます。">
 
     <div>著者</div>
-    <input type="text" name="author" maxlength="15" value="<%= @post.author %>" class="form-control" placeholder="15字まで入力できます。">
+    <input type="text" id="author" name="author" maxlength="15" value="<%= @post.author %>" class="form-control" placeholder="15字まで入力できます。">
 
     <div>フレーズ</div>
     <input type="text" name="phrase" maxlength="50" value="<%= @post.phrase %>" class="form-control" placeholder="50字まで入力できます。">
@@ -12,7 +12,7 @@
     <textarea name="content" maxlength="120" class="form-control" rows="3" placeholder="120字まで入力できます。"><%= @post.content %></textarea>
 
     <div>画像URL</div>
-    <input type="url" name="book_image" class="form-control" value="<%= @post.book_image %>" class="form-control" placeholder="画像URLを貼ってください。">
+    <input type="url" id="book_image" name="book_image" class="form-control" value="<%= @post.book_image %>" class="form-control" placeholder="画像URLを貼ってください。">
 
     <div class="center-block">
         <input type="submit" class="input-submit " value="投稿">

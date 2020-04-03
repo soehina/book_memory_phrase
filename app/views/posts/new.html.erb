@@ -1,15 +1,14 @@
 <div class="container-fluid">
   <div class="row">
         <div class="center-block mx-auto">
+            <div id="search-box" class="center-block mx-auto">
+                <%= render 'posts/search' %>
+            </div>
                 <%= form_tag(posts_path,{method: :post}) do %>
                     <%= render 'shared/post_form' %>
                 <% end %>
         </div>
-        <div id="search-box" class="center-block mx-auto">
-            <%= render 'posts/search' %>
-            <div id="render-results">
-                <p>検索結果</p>
-            </div>
+        <div id="render-results">
         </div>
     </div>
 </div>

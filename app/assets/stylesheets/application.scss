@@ -455,12 +455,12 @@ p{
     display: flex;
     flex-direction: row;
     width: 380px;
+    margin: 20px auto;
 }
 
 .box,
 .result-box{
     background-color: $c-white;
-    margin: 25px 0;
     box-shadow: 15px 20px 6px $shadow;
     transition: all 0.3s;
     transform: translate(0);
@@ -472,39 +472,6 @@ p{
     & a,
     & span{
         font-weight: bold;
-    }
-}
-
-.result-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 380px;
-    height: 500px;
-    margin: 30px auto;
-    color: $textcolor;
-    & img{
-        width: 265px;
-        margin: 15px auto;
-    }
-    & h3{
-        font-size: 20px;
-        font-weight: bold;
-    }
-    & button{
-        margin-bottom: 10px;
-        border: 1px solid $textcolor;
-        border-radius: 50px;
-        padding: 5px;
-        width: 60px;
-        height: 34px;
-        color: $textcolor;
-        box-shadow: 4px 4px 3px $shadow;
-        &:hover{
-            transition: all 0.3s;
-            color: $linkcolor;
-            box-shadow: 2px 2px 3px $shadow;
-        }
     }
 }
 
@@ -563,7 +530,7 @@ p{
     }
 }
 
-.niltext,
+.authors,
 .edit-delete{
     text-align: end;
 }

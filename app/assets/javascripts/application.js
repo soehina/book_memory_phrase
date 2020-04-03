@@ -21,3 +21,17 @@ function loaded(){
     loading.classList.add('loaded');
 };
 window.onload = loaded;
+
+document.addEventListener('ajax:success',function(){
+    document.addEventListener('click', function (ev) {
+        var el = ev.target;
+        if (el.matches('.result-box')) {
+            var set_title = el.querySelector(':scope > h3').textContent;
+            var set_author = el.querySelector(':scope > p').textContent;
+            var set_image = el.querySelector(':scope > img').getAttribute('src');
+            document.getElementById('title').value = set_title;
+            document.getElementById('author').value = set_author;
+            document.getElementById('book_image').value = set_image;
+        }
+    }, false);
+},false);

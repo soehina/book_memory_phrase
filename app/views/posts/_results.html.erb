@@ -14,11 +14,10 @@
                         <h3 class="title"><%= @results["items"][i]["volumeInfo"]["title"] %></h3>
                     <% end %>
                     <% if @results["items"][i]["volumeInfo"]["authors"].nil?  %>
-                        <p class="niltext">情報がありません</p>
+                        <p class="author">情報がありません</p>
                     <% else %>
-                        <p class="niltext"><%= @results["items"][i]["volumeInfo"]["authors"][0] %></p>
+                        <p class="author"><%= @results["items"][i]["volumeInfo"]["authors"][0] %></p>
                     <% end %>
-                    <button onclick="setbook(this)">選択</button>
                 </div>
             <% end %>
         </div>
