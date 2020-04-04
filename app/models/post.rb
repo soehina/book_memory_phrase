@@ -5,7 +5,7 @@ class Post < ApplicationRecord
     validates :author,:presence => true, length:{maximum: 15}
     validates :post_user_id,:presence => true
 
-    belongs_to :user
+    belongs_to :user, optional: true
     has_many :likes, dependent: :destroy
     has_many :users, through: :likes
 
