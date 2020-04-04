@@ -98,7 +98,6 @@ GEM
     devise-i18n-views (0.3.7)
     erubi (1.9.0)
     execjs (2.7.0)
-    faker (2.11.0)
       i18n (>= 1.6, < 2)
     ffi (1.12.2)
     globalid (0.4.2)
@@ -281,7 +280,6 @@ DEPENDENCIES
   devise
   devise-i18n
   devise-i18n-views
-  faker
   httparty
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3.5)
