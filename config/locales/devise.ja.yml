@@ -61,12 +61,3 @@ ja:
       unlock_instructions:
         subject: 'アカウントの凍結解除'
 #        subject: 'Unlock Instructions'
-ja:
-      activerecord:
-        attributes:
-          user:
-            name: 名前
-            password: パスワード
-            password_confirmation: パスワードの確認
-            email: メールアドレス
-            image: 画像
