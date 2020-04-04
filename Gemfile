@@ -86,3 +86,7 @@ gem 'seed_dump'
 #api関連
 gem 'json'
 gem 'httparty'
+
+group :dvelopment do
+  gem 'faker'
+end 

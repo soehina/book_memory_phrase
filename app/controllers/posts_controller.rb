@@ -5,7 +5,7 @@ require 'httparty'
 class PostsController < ApplicationController
     before_action :set_post, only: [:show, :add_score, :edit, :update, :destroy]
     before_action :authenticate_user!, only: [:show, :create, :new, :edit, :destroy]
-    @@results = []
+    @results = []
     require 'nil_class'
 
     def index
