@@ -1,13 +1,4 @@
 ja:
-  errors:
-    messages:
-      not_found: "は見つかりませんでした"
-#      not_found: "not found"
-      already_confirmed: "は既に登録済みです"
-#      already_confirmed: "was already confirmed"
-      not_locked: "は凍結されていません"
-#      not_locked: "was not locked"
-
   devise:
     failure:
       unauthenticated: 'ログインしてください。'
