@@ -86,3 +86,5 @@ gem 'seed_dump'
 #api関連
 gem 'json'
 gem 'httparty'
+
+gem 'rails-i18n'
