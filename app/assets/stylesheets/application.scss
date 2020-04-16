@@ -228,7 +228,7 @@ p{
     color: $titlecolor;
     height: 62px;
     padding: 10px;
-    width: 45%;
+    width: 60%;
     font-size: x-large;
     background-color: $c-white;
     border-left: none;
@@ -274,32 +274,14 @@ p{
         width: 100%;
         height: auto;
         padding-top: 0;
+        margin-top: -7px;
         -webkit-transition: transform 0.3s ease-in;
-        transition: transform 0.3s ease-in;
         text-align: center;
         background-color: transparent;
-    }
-    .cp_offcm03 nav,
-    .cp_offcm03 ul {
-        height: 100%;
-    }
-
-    .cp_offcm03{
-        margin: 0;
-        opacity: 0;
-        transition: all 0.3s;
-        &:hover{
-            opacity: 1;
-            transform: translate(0,30px);
-            transition: all 0.3s;
-        }
-    }
-
-    .cp_offcm03{
         & li {
-                display: inline-block;
-                margin-right: -6px;
-                border: none;
+            display: inline-block;
+            margin-right: -6px;
+            border: none;
         }
         & a{
             display: block;
@@ -314,6 +296,11 @@ p{
             }
         }
     }
+    .cp_offcm03 nav,
+    .cp_offcm03 ul {
+        height: 100%;
+    }
+
     /* menu toggle */
     #cp_toggle03 {
         display: none;
@@ -630,21 +617,72 @@ footer{
 
 @media screen and (max-width:767px) {
     /*　画面サイズが1024px以下からはここを読み込む　*/
+
+    #overwrap{
+        border: none;
+    }
+
+    .wrap{
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+
+    .title-top{
+        display: none;
+    }
+
     #title-nav{
         background-color: transparent;
+    }
+
+    #disc{
+        padding: 29px;
     }
 
     .site-title{
         color: $linkcolor;
     }
 
+    .center-block input{
+        border: 1px solid $textcolor;
+    }
+
     .user_show_name{
         color: $linkcolor;
-        margin-top: 40px;
+        margin-top: 0;
         margin-bottom: -45px;
     }
 
+    .show-icon{
+        padding-top: 30px;
+    }
+
     .form-box{
-        width: 400px;
+        width: 345px;
+        margin-top: 0;
+    }
+
+    #search-box{
+        margin-top: 45px;
+    }
+
+    .box{
+        width: 350px;
+        height: 610px;
+        box-shadow: none;
+    }
+
+    .result-box{
+        width: 350px;
+        height: 490px;
+        box-shadow: none;
+    }
+
+    .name{
+        margin-bottom: 30px;
+    }
+
+    .image-box img{
+        width: 160px;
     }
 }
