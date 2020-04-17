@@ -23,9 +23,9 @@ Unlike traditional posting apps, the use of vertical CSS makes the design take a
 - Docker
 - docker-compose
 - GooglebooksAPI
-- AWS (planned)
-
-※現在AWS/cicleCIにてインフラ構築中
+- AWS
+    - EC2
+    - RDS
 
 ## Functions list
 - Login / Logout
