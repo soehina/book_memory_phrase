@@ -6,7 +6,7 @@ This app was created to create a new encounter with books by introducing and sha
 
 本に書かれた言葉には、時に人生を大きく変えてしまうような、強い力があります。 このアプリは、自分にとっての思い出の本とその1フレーズを一緒に紹介・共有することで、本との新たな出逢いを生むために作られました。
 
-## Demo(Video)
+## Demo
 http://54.199.217.238:3000
 
 ## Features
