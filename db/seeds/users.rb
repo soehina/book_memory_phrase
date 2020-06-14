@@ -5,7 +5,7 @@ User.create!([
     reset_password_token: nil,
     reset_password_sent_at: nil,
     remember_created_at: nil,
-    name: "kinako",
+    name: "きなこ",
     image: "IMG_6077.jpg"
   },
   {
@@ -23,12 +23,12 @@ User.create!([
     reset_password_token: nil,
     reset_password_sent_at: nil,
     remember_created_at: nil,
-    name: "hinako",
+    name: "ひなこ",
     image: "download20191003183443.png"
   },
   {
     email: "test@example.com",
-    password: "testtest",
+    password: "testtesttest",
     reset_password_token: nil,
     reset_password_sent_at: nil,
     remember_created_at: nil,
